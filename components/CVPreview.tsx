@@ -54,8 +54,8 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
           </div>
         </div>
         <div className="w-2/3 p-10 flex flex-col justify-center">
-          {/* Removed tracking-wide and tracking-widest to fix PDF double text issue */}
-          <h1 className="text-5xl font-bold uppercase mb-2">{personalInfo.fullName}</h1>
+          {/* Removed uppercase class to respect user capitalization */}
+          <h1 className="text-5xl font-bold mb-2">{personalInfo.fullName}</h1>
           <p className="text-2xl font-light uppercase">{personalInfo.title}</p>
         </div>
       </div>

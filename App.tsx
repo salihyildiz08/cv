@@ -11,7 +11,7 @@ import {
 const initialData: ResumeData = {
   themeColor: '#4b5563', // Updated to match the screenshot's dark grey tone
   personalInfo: {
-    fullName: 'SALIH YILDIZ',
+    fullName: 'Salih Yıldız',
     title: 'FULL STACK DEVELOPER',
     email: 'yldzsalih27@gmail.com',
     phone: '+90 543 282 3301',
@@ -233,8 +233,8 @@ function App() {
     const fileNameSafe = data.personalInfo.fullName
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g, "")
-      .replace(/[^a-zA-Z0-9]/g, "_")
-      .toUpperCase();
+      .replace(/[^a-zA-Z0-9]/g, "_");
+      // Removed .toUpperCase() to prevent all caps filename if not desired
 
     // @ts-ignore
     if (window.html2pdf) {
@@ -272,11 +272,11 @@ function App() {
       {/* Sidebar Navigation */}
       <div className="w-64 bg-white border-r flex flex-col shrink-0 z-20 h-full overflow-y-auto no-scrollbar">
         <div className="p-6 border-b">
-          <div className="flex items-center gap-2 font-bold text-xl text-gray-800">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white">
+          <div className="flex items-center gap-2 font-bold text-lg text-gray-800">
+            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white shrink-0">
               CV
             </div>
-            ProCV
+            Salih Yıldız CV Oluşturucu
           </div>
         </div>
         
