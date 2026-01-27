@@ -29,7 +29,7 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
   return (
     <div 
       id={id}
-      className="bg-white text-gray-800 shadow-2xl print-container mx-auto relative overflow-hidden"
+      className="bg-white text-gray-800 print-container mx-auto relative overflow-hidden"
       style={{ 
         width: '210mm', 
         minHeight: '297mm',
@@ -54,8 +54,9 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
           </div>
         </div>
         <div className="w-2/3 p-10 flex flex-col justify-center">
-          <h1 className="text-5xl font-bold uppercase tracking-wide mb-2">{personalInfo.fullName}</h1>
-          <p className="text-2xl font-light opacity-90 tracking-widest uppercase">{personalInfo.title}</p>
+          {/* Removed tracking-wide and tracking-widest to fix PDF double text issue */}
+          <h1 className="text-5xl font-bold uppercase mb-2">{personalInfo.fullName}</h1>
+          <p className="text-2xl font-light uppercase">{personalInfo.title}</p>
         </div>
       </div>
 
@@ -66,7 +67,8 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
             
             {/* Contact Info */}
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-widest text-gray-400 mb-4 border-b pb-2">İletişim</h3>
+              {/* Removed tracking-widest */}
+              <h3 className="text-sm font-bold uppercase text-gray-400 mb-4 border-b pb-2">İletişim</h3>
               <ul className="space-y-4 text-sm">
                 {personalInfo.email && (
                   <li className="flex items-start gap-3">
@@ -110,7 +112,7 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
             {/* Skills */}
             {skills.length > 0 && (
               <div>
-                <h3 className="text-sm font-bold uppercase tracking-widest text-gray-400 mb-4 border-b pb-2">Yetenekler</h3>
+                <h3 className="text-sm font-bold uppercase text-gray-400 mb-4 border-b pb-2">Yetenekler</h3>
                 <div className="flex flex-wrap gap-2">
                   {skills.map((skill, idx) => (
                     <span 
@@ -128,7 +130,7 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
             {/* Languages (Added to Sidebar) */}
             {languages && languages.length > 0 && (
               <div>
-                <h3 className="text-sm font-bold uppercase tracking-widest text-gray-400 mb-4 border-b pb-2">Yabancı Dil</h3>
+                <h3 className="text-sm font-bold uppercase text-gray-400 mb-4 border-b pb-2">Yabancı Dil</h3>
                 <ul className="space-y-2">
                   {languages.map((lang) => (
                     <li key={lang.id} className="text-sm">
@@ -143,7 +145,7 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
             {/* Education (Sidebar style) */}
             {education.length > 0 && (
                <div>
-               <h3 className="text-sm font-bold uppercase tracking-widest text-gray-400 mb-4 border-b pb-2">Eğitim</h3>
+               <h3 className="text-sm font-bold uppercase text-gray-400 mb-4 border-b pb-2">Eğitim</h3>
                <div className="space-y-5">
                  {education.map((edu) => (
                    <div key={edu.id}>
@@ -159,7 +161,7 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
             {/* References (Moved to Sidebar under Education) */}
             {references.length > 0 && (
               <div>
-                <h3 className="text-sm font-bold uppercase tracking-widest text-gray-400 mb-4 border-b pb-2">Referanslar</h3>
+                <h3 className="text-sm font-bold uppercase text-gray-400 mb-4 border-b pb-2">Referanslar</h3>
                 <div className="space-y-4">
                   {references.map((ref) => (
                     <div key={ref.id} className="text-sm">
@@ -182,7 +184,7 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
           {/* Summary */}
           {personalInfo.summary && (
             <section>
-              <h2 className="text-xl font-bold uppercase tracking-wider mb-4 flex items-center gap-3" style={{ color: themeColor }}>
+              <h2 className="text-xl font-bold uppercase mb-4 flex items-center gap-3" style={{ color: themeColor }}>
                 <span className="w-8 h-1 rounded-full bg-current"></span>
                 Hakkımda
               </h2>
@@ -195,7 +197,7 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
           {/* Experience */}
           {experience.length > 0 && (
             <section>
-              <h2 className="text-xl font-bold uppercase tracking-wider mb-6 flex items-center gap-3" style={{ color: themeColor }}>
+              <h2 className="text-xl font-bold uppercase mb-6 flex items-center gap-3" style={{ color: themeColor }}>
                 <span className="w-8 h-1 rounded-full bg-current"></span>
                 İş Deneyimi
               </h2>
@@ -225,7 +227,7 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
           {/* Projects */}
           {projects.length > 0 && (
             <section>
-              <h2 className="text-xl font-bold uppercase tracking-wider mb-6 flex items-center gap-3" style={{ color: themeColor }}>
+              <h2 className="text-xl font-bold uppercase mb-6 flex items-center gap-3" style={{ color: themeColor }}>
                 <span className="w-8 h-1 rounded-full bg-current"></span>
                 Projeler
               </h2>
@@ -253,8 +255,6 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
               </div>
             </section>
           )}
-
-          {/* References Section Removed from Here */}
 
         </div>
       </div>

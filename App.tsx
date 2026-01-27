@@ -229,11 +229,18 @@ function App() {
     const element = document.getElementById('resume-preview');
     if (!element) return;
     
+    // Normalize filename (replace Turkish chars and spaces)
+    const fileNameSafe = data.personalInfo.fullName
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-zA-Z0-9]/g, "_")
+      .toUpperCase();
+
     // @ts-ignore
     if (window.html2pdf) {
       const opt = {
         margin: 0,
-        filename: `${data.personalInfo.fullName.replace(/\s+/g, '_')}_CV.pdf`,
+        filename: `${fileNameSafe}_CV.pdf`,
         image: { type: 'jpeg', quality: 0.98 },
         html2canvas: { scale: 2, useCORS: true },
         jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
