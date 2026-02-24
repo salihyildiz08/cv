@@ -11,16 +11,16 @@ import {
 const initialData: ResumeData = {
   themeColor: '#4b5563', // Updated to match the screenshot's dark grey tone
   personalInfo: {
-    fullName: 'Salih Yıldız',
-    title: 'FULL STACK DEVELOPER',
+    fullName: 'SALİH YILDIZ',
+    title: 'Full Stack Developer (.NET Focused) | SQL & Integration Systems',
     email: 'yldzsalih27@gmail.com',
     phone: '+90 543 282 3301',
-    location: 'Nizip, Gaziantep, Türkiye',
+    location: 'Nizip, Gaziantep, Turkey',
     website: 'https://salihyildiz.runasp.net',
-    linkedin: 'https://www.linkedin.com/in/salih-yildiz-bab4b1181/',
+    linkedin: 'https://linkedin.com/in/salih-yildiz-bab4b1181/',
     github: 'https://github.com/salihyildiz08',
     photoUrl: 'https://picsum.photos/200', // Placeholder, user can upload the real photo
-    summary: ".NET, Angular,React, Web API, TypeScript ve SQL teknolojileriyle deneyimli bir Fullstack Developer'im. Çeşitli projelerde şirket operasyonel verimliliğini artırarak süreçleri optimize ettim. N-Katmanlı, Clean ve Microservice mimarilerinde uzmanım. Yaratıcı ve çözüm odaklı yaklaşımım ile projeleri zamanında ve başarıyla teslim ederim. Sürekli öğrenme ve teknolojiye olan tutkumla her zaman en iyi çözümleri sunmayı hedefliyorum.",
+    summary: "Experienced Full Stack Developer focused on the .NET ecosystem, specializing in data-intensive and integration-heavy enterprise systems. Developed scalable, sustainable, and performance-oriented solutions using ASP.NET Core, Web API, Angular, and React. Following Clean Architecture and N-Tier architecture principles, I have taken end-to-end responsibility in B2B integrations, payments, ordering, reconciliation, and quality control processes. A software developer who prioritizes data integrity, system continuity, and operational efficiency, aligning technical expertise with business goals.",
   },
   experience: [
     {
@@ -28,8 +28,8 @@ const initialData: ResumeData = {
       company: 'Dilek Halı A.Ş.',
       position: 'Full Stack Developer',
       startDate: '2022',
-      endDate: 'Devam Ediyor',
-      description: '- B2B entegrasyonları, kargo ve ödeme sistemlerini başarıyla geliştirdim.\n- Sistem optimizasyonları ile operasyonel süreçlerde %40 verimlilik artışı sağladım.\n- Kullanıcıların markalama ve sipariş yönetimini kolaylaştıracak algoritmalar tasarladım.'
+      endDate: 'Present',
+      description: '- Designed and developed end-to-end cargo and payment system integrations within the B2B ecosystem.\n- Achieved approximately 40% improvement in operational efficiency through performance and process optimizations in existing systems.\n- Developed high-performance algorithms to automate order, branding, and production workflows.\n- Implemented updates focused on data accuracy and system continuity for financial data, ordering, and quality control processes.'
     },
     {
       id: '2',
@@ -37,14 +37,14 @@ const initialData: ResumeData = {
       position: 'Full Stack Developer',
       startDate: '2020',
       endDate: '2022',
-      description: '- Banka hesap özetlerini ve müşteri hesap yönetimini dinamik Web API ile otomatikleştirdim.\n- Şirket içi iletişim ve bilgi yönetimi projeleriyle süreçleri %30 daha hızlı hale getirdim.\n- Kalite kontrol ve QR kod entegrasyonu ile üretim hatalarını takip eden sistemler geliştirdim.'
+      description: '- Automated bank reconciliations and customer account management processes using Web API-based services.\n- Increased business process speed and efficiency by approximately 30% through information management projects.\n- Minimized production errors and ensured end-to-end traceability by developing tracking systems integrated with QR codes and quality control.'
     }
   ],
   education: [
     {
       id: '1',
-      school: 'İskenderun Teknik Üniversitesi',
-      degree: 'Bilgisayar Mühendisliği',
+      school: 'İskenderun Technical University',
+      degree: 'B.S. in Computer Engineering',
       startDate: '2016',
       endDate: '2020',
       description: ''
@@ -53,46 +53,61 @@ const initialData: ResumeData = {
   projects: [
     {
       id: '1',
-      name: 'B2B Sipariş Yönetimi',
+      name: 'B2B Order Management',
       link: '',
-      description: 'Bayilerin stok ve üretim siparişlerini yönetmek için algoritmalar geliştirdim.',
-      technologies: ['ASP.NET CORE', 'ANGULAR', 'N-TIER MIMARI']
+      description: 'Design of algorithms to optimize dealer stock, production, and ordering processes.',
+      technologies: ['ASP.NET Core', 'Angular', 'N-Tier Architecture']
     },
     {
       id: '2',
-      name: 'Banka Ekstreleri / Hesap Özetleri',
+      name: 'Bank Statements / Account Summaries',
       link: '',
-      description: 'Birden fazla banka web servisi entegre edildi.',
-      technologies: ['ASP.NET CORE 8', 'ANGULAR', 'CLEAN ARCHITECTURE']
+      description: 'Automating statement and summary data flows via multi-bank API integration.',
+      technologies: ['ASP.NET Core 8', 'Angular', 'Clean Architecture']
     },
     {
       id: '3',
-      name: 'Kalite Kontrol Sistemi',
+      name: 'Quality Control System',
       link: '',
-      description: 'Üretim hatalarını ve ölçümleri takip eden sistem, tablet ve Android uyumlu. %35 gibi bir oranda verimlilik sağlandı.',
-      technologies: ['ASP.NET CORE 6', 'WEB API']
+      description: 'Real-time tracking and 35% efficiency increase in production processes via an Android-based mobile application.',
+      technologies: ['ASP.NET Core 6', 'Web API']
     },
     {
       id: '4',
-      name: 'QR Kod ile Sipariş ve Yönetim',
+      name: 'QR Code Order & Management',
       link: '',
-      description: 'SignalR ile gerçek zamanlı bildirim ve mesajlaşma entegre edildi.',
+      description: 'Real-time order management and instant notification infrastructure using SignalR integration.',
       technologies: ['SignalR']
     },
     {
       id: '5',
-      name: 'Şirket İçi İletişim Ve Bilgi Projesi',
+      name: 'In-Company Communication & Info Project',
       link: '',
-      description: 'Şirket içi iletişim problemlerini çözmek için geliştirdim. %80 oranında iletişim sorunları giderildi.',
-      technologies: ['ASP .NET CORE 6', 'BOOTSTRAP', 'JS', 'HTML']
+      description: 'A system that improved internal communication processes and reduced disruptions by 80%.',
+      technologies: ['ASP.NET Core 6', 'Bootstrap', 'JS']
     }
   ],
   skills: [
-    '.NET', '.NET Core', 'Web API', 'SQL', 'Docker', 'MongoDB', 'PostgreSQL', 
-    'Angular', 'React', 'Bootstrap', 'HTML', 'CSS', 'JavaScript', 'TypeScript', 
-    'N-Tier', 'Clean', 'Microservice Architecture', 'SignalR', 'WebView', 'Paytr', 'IPara', 'Git'
+    {
+      category: 'Backend',
+      items: ['.NET', '.NET Core', 'ASP.NET Core Web API', 'SignalR']
+    },
+    {
+      category: 'Frontend',
+      items: ['Angular', 'React', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Bootstrap']
+    },
+    {
+      category: 'Database',
+      items: ['MS SQL Server (T-SQL, Stored Procedures, Performance Optimization)', 'PostgreSQL', 'MongoDB']
+    },
+    {
+      category: 'Architecture & Tools',
+      items: ['Clean Architecture', 'N-Tier Architecture', 'Microservice Approaches', 'Docker', 'Git']
+    }
   ],
-  languages: [],
+  languages: [
+    { id: '1', name: 'English', level: 'B1 Level' }
+  ],
   references: [
     { 
       id: '1', 
@@ -196,6 +211,31 @@ function App() {
     setData(prev => ({ ...prev, projects: prev.projects.filter(p => p.id !== id) }));
   };
 
+  const addSkillCategory = () => {
+    setData(prev => ({
+      ...prev,
+      skills: [...prev.skills, { category: 'New Category', items: [] }]
+    }));
+  };
+
+  const updateSkillCategory = (index: number, category: string) => {
+    const newSkills = [...data.skills];
+    newSkills[index].category = category;
+    setData(prev => ({ ...prev, skills: newSkills }));
+  };
+
+  const updateSkillItems = (index: number, items: string[]) => {
+    const newSkills = [...data.skills];
+    newSkills[index].items = items;
+    setData(prev => ({ ...prev, skills: newSkills }));
+  };
+
+  const removeSkillCategory = (index: number) => {
+    const newSkills = [...data.skills];
+    newSkills.splice(index, 1);
+    setData(prev => ({ ...prev, skills: newSkills }));
+  };
+
   const addLanguage = () => {
     setData(prev => ({
       ...prev,
@@ -236,14 +276,18 @@ function App() {
       .replace(/[^a-zA-Z0-9]/g, "_");
       // Removed .toUpperCase() to prevent all caps filename if not desired
 
+    // Scroll to top to ensure full capture
+    window.scrollTo(0, 0);
+
     // @ts-ignore
     if (window.html2pdf) {
       const opt = {
         margin: 0,
         filename: `${fileNameSafe}_CV.pdf`,
         image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2, useCORS: true },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        html2canvas: { scale: 2, useCORS: true, scrollY: 0 },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+        pagebreak: { mode: ['css', 'legacy'] }
       };
       // @ts-ignore
       window.html2pdf().set(opt).from(element).save();
@@ -479,20 +523,29 @@ function App() {
             )}
 
             {activeTab === 'skills' && (
-              <div className="space-y-4">
-                <label className="block text-sm font-medium text-gray-700">Yetenekler (Virgülle ayırın)</label>
-                <textarea 
-                  className="w-full p-3 border rounded-lg h-32 text-sm focus:ring-2 focus:ring-blue-500 outline-none"
-                  value={data.skills.join(', ')}
-                  onChange={(e) => setData(prev => ({ ...prev, skills: e.target.value.split(',').map(s => s.trim()) }))}
-                  placeholder="Java, Python, Leadership, Communication..."
-                ></textarea>
-                 <button 
-                    onClick={() => handleAiEnhance(data.skills.join(', '), 'List of professional skills', (v) => setData(prev => ({...prev, skills: v.split(',').map(s => s.trim())})))}
-                    className="w-full p-2 bg-blue-50 text-blue-600 rounded flex items-center justify-center gap-2 hover:bg-blue-100"
-                  >
-                    <Wand2 size={16} /> AI ile Yetenek Öner
-                  </button>
+              <div className="space-y-6">
+                {data.skills.map((group, idx) => (
+                  <div key={idx} className="border rounded-lg p-4 bg-gray-50 relative group">
+                    <button onClick={() => removeSkillCategory(idx)} className="absolute top-2 right-2 text-gray-400 hover:text-red-500 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <Trash2 size={16} />
+                    </button>
+                    <div className="space-y-3">
+                      <InputGroup label="Kategori" value={group.category} onChange={(v) => updateSkillCategory(idx, v)} placeholder="örn: Frontend" />
+                      <div>
+                        <label className="text-xs font-semibold text-gray-500 mb-1 block">Yetenekler (Virgülle ayırın)</label>
+                        <textarea 
+                          className="w-full p-2 border rounded text-sm h-20 focus:ring-2 focus:ring-blue-500 outline-none"
+                          value={group.items.join(', ')}
+                          onChange={(e) => updateSkillItems(idx, e.target.value.split(',').map(s => s.trim()))}
+                          placeholder="React, TypeScript, CSS..."
+                        />
+                      </div>
+                    </div>
+                  </div>
+                ))}
+                <button onClick={addSkillCategory} className="w-full py-2 border-2 border-dashed border-gray-300 rounded-lg text-gray-500 hover:border-blue-500 hover:text-blue-500 transition-colors flex items-center justify-center gap-2">
+                  <Plus size={16} /> Kategori Ekle
+                </button>
               </div>
             )}
 

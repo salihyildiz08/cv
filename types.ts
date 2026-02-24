@@ -38,6 +38,11 @@ export interface Language {
   level: string;
 }
 
+export interface SkillGroup {
+  category: string;
+  items: string[];
+}
+
 export interface ResumeData {
   personalInfo: {
     fullName: string;
@@ -54,7 +59,7 @@ export interface ResumeData {
   experience: Experience[];
   education: Education[];
   projects: Project[];
-  skills: string[];
+  skills: SkillGroup[];
   languages: Language[];
   references: Reference[];
   themeColor: string;

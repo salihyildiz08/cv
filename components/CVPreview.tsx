@@ -68,40 +68,40 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
             {/* Contact Info */}
             <div>
               {/* Removed tracking-widest */}
-              <h3 className="text-sm font-bold uppercase text-gray-400 mb-4 border-b pb-2">İletişim</h3>
+              <h3 className="text-sm font-bold uppercase text-gray-400 mb-4 border-b pb-2">Contact</h3>
               <ul className="space-y-4 text-sm">
                 {personalInfo.email && (
-                  <li className="flex items-start gap-3">
+                  <li className="flex items-start gap-3 break-inside-avoid">
                     <Mail size={16} className="mt-1 shrink-0" style={{ color: themeColor }} />
                     <span className="break-all">{personalInfo.email}</span>
                   </li>
                 )}
                 {personalInfo.phone && (
-                  <li className="flex items-start gap-3">
+                  <li className="flex items-start gap-3 break-inside-avoid">
                     <Phone size={16} className="mt-1 shrink-0" style={{ color: themeColor }} />
                     <span>{personalInfo.phone}</span>
                   </li>
                 )}
                 {personalInfo.location && (
-                  <li className="flex items-start gap-3">
+                  <li className="flex items-start gap-3 break-inside-avoid">
                     <MapPin size={16} className="mt-1 shrink-0" style={{ color: themeColor }} />
                     <span>{personalInfo.location}</span>
                   </li>
                 )}
                 {personalInfo.website && (
-                  <li className="flex items-start gap-3">
+                  <li className="flex items-start gap-3 break-inside-avoid">
                     <Globe size={16} className="mt-1 shrink-0" style={{ color: themeColor }} />
                     <a href={ensureUrl(personalInfo.website)} target="_blank" rel="noreferrer" className="hover:underline text-blue-600 break-all">{personalInfo.website}</a>
                   </li>
                 )}
                 {personalInfo.linkedin && (
-                  <li className="flex items-start gap-3">
+                  <li className="flex items-start gap-3 break-inside-avoid">
                     <Linkedin size={16} className="mt-1 shrink-0" style={{ color: themeColor }} />
                     <a href={ensureUrl(personalInfo.linkedin)} target="_blank" rel="noreferrer" className="hover:underline break-all">{personalInfo.linkedin}</a>
                   </li>
                 )}
                 {personalInfo.github && (
-                  <li className="flex items-start gap-3">
+                  <li className="flex items-start gap-3 break-inside-avoid">
                     <Github size={16} className="mt-1 shrink-0" style={{ color: themeColor }} />
                     <a href={ensureUrl(personalInfo.github)} target="_blank" rel="noreferrer" className="hover:underline break-all">{personalInfo.github}</a>
                   </li>
@@ -112,16 +112,23 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
             {/* Skills */}
             {skills.length > 0 && (
               <div>
-                <h3 className="text-sm font-bold uppercase text-gray-400 mb-4 border-b pb-2">Yetenekler</h3>
-                <div className="flex flex-wrap gap-2">
-                  {skills.map((skill, idx) => (
-                    <span 
-                      key={idx} 
-                      className="text-xs font-semibold px-2 py-1 rounded text-white"
-                      style={{ backgroundColor: themeColor }}
-                    >
-                      {skill}
-                    </span>
+                <h3 className="text-sm font-bold uppercase text-gray-400 mb-4 border-b pb-2">Technical Skills</h3>
+                <div className="space-y-4">
+                  {skills.map((group, idx) => (
+                    <div key={idx} className="break-inside-avoid">
+                      <h4 className="text-xs font-bold text-gray-700 uppercase mb-2">{group.category}</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {group.items.map((skill, i) => (
+                          <span 
+                            key={i} 
+                            className="text-xs font-semibold px-2 py-1 rounded text-white"
+                            style={{ backgroundColor: themeColor }}
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   ))}
                 </div>
               </div>
@@ -130,10 +137,10 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
             {/* Languages (Added to Sidebar) */}
             {languages && languages.length > 0 && (
               <div>
-                <h3 className="text-sm font-bold uppercase text-gray-400 mb-4 border-b pb-2">Yabancı Dil</h3>
+                <h3 className="text-sm font-bold uppercase text-gray-400 mb-4 border-b pb-2">Languages</h3>
                 <ul className="space-y-2">
                   {languages.map((lang) => (
-                    <li key={lang.id} className="text-sm">
+                    <li key={lang.id} className="text-sm break-inside-avoid">
                       <div className="font-bold text-gray-800">{lang.name}</div>
                       <div className="text-xs text-gray-500">{lang.level}</div>
                     </li>
@@ -145,10 +152,10 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
             {/* Education (Sidebar style) */}
             {education.length > 0 && (
                <div>
-               <h3 className="text-sm font-bold uppercase text-gray-400 mb-4 border-b pb-2">Eğitim</h3>
+               <h3 className="text-sm font-bold uppercase text-gray-400 mb-4 border-b pb-2">Education</h3>
                <div className="space-y-5">
                  {education.map((edu) => (
-                   <div key={edu.id}>
+                   <div key={edu.id} className="break-inside-avoid">
                      <div className="font-bold text-gray-800">{edu.school}</div>
                      <div className="text-sm text-gray-600">{edu.degree}</div>
                      <div className="text-xs text-gray-400 mt-1">{edu.startDate} - {edu.endDate}</div>
@@ -161,10 +168,10 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
             {/* References (Moved to Sidebar under Education) */}
             {references.length > 0 && (
               <div>
-                <h3 className="text-sm font-bold uppercase text-gray-400 mb-4 border-b pb-2">Referanslar</h3>
+                <h3 className="text-sm font-bold uppercase text-gray-400 mb-4 border-b pb-2">References</h3>
                 <div className="space-y-4">
                   {references.map((ref) => (
-                    <div key={ref.id} className="text-sm">
+                    <div key={ref.id} className="text-sm break-inside-avoid">
                       <div className="font-bold text-gray-800">{ref.name}</div>
                       <div className="text-xs italic text-gray-600 mb-0.5">{ref.company}</div>
                       <div className="text-[10px] text-gray-400">{ref.email}</div>
@@ -186,7 +193,7 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
             <section>
               <h2 className="text-xl font-bold uppercase mb-4 flex items-center gap-3" style={{ color: themeColor }}>
                 <span className="w-8 h-1 rounded-full bg-current"></span>
-                Hakkımda
+                Summary
               </h2>
               <p className="text-gray-600 leading-relaxed text-sm text-justify">
                 {personalInfo.summary}
@@ -199,11 +206,11 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
             <section>
               <h2 className="text-xl font-bold uppercase mb-6 flex items-center gap-3" style={{ color: themeColor }}>
                 <span className="w-8 h-1 rounded-full bg-current"></span>
-                İş Deneyimi
+                Work Experience
               </h2>
               <div className="space-y-6">
                 {experience.map((exp) => (
-                  <div key={exp.id} className="relative pl-6 border-l-2 border-gray-100">
+                  <div key={exp.id} className="relative pl-6 border-l-2 border-gray-100 break-inside-avoid">
                     <div 
                       className="absolute -left-[9px] top-0 w-4 h-4 rounded-full border-2 bg-white"
                       style={{ borderColor: themeColor }}
@@ -229,11 +236,11 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
             <section>
               <h2 className="text-xl font-bold uppercase mb-6 flex items-center gap-3" style={{ color: themeColor }}>
                 <span className="w-8 h-1 rounded-full bg-current"></span>
-                Projeler
+                Projects
               </h2>
               <div className="grid grid-cols-1 gap-4">
                 {projects.map((proj) => (
-                  <div key={proj.id} className="bg-gray-50 p-4 rounded-lg border border-gray-100">
+                  <div key={proj.id} className="bg-gray-50 p-4 rounded-lg border border-gray-100 break-inside-avoid">
                     <div className="flex justify-between items-start mb-2">
                       <h3 className="font-bold text-gray-800">{proj.name}</h3>
                       {proj.link && (
