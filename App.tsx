@@ -1,5 +1,4 @@
-import React, { useState, useRef } from 'react';
-import { useReactToPrint } from 'react-to-print';
+import React, { useState } from 'react';
 import { ResumeData, Experience, Education, Project, Reference, Language } from './types';
 import { CVPreview } from './components/CVPreview';
 import { enhanceText } from './services/geminiService';
@@ -249,15 +248,9 @@ function App() {
     setIsGenerating(false);
   };
 
-  const componentRef = useRef<HTMLDivElement>(null);
-
-  const handlePrint = useReactToPrint({
-    contentRef: componentRef,
-    documentTitle: `${data.personalInfo.fullName.replace(/\s+/g, '_')}_CV`,
-  });
-
   const downloadPdf = () => {
-    handlePrint();
+    // Use window.print() for native, high-quality, text-based ATS-friendly PDF generation
+    window.print();
   };
 
   // UI Components for Editor Sections
@@ -304,9 +297,10 @@ function App() {
           <button 
             onClick={downloadPdf}
             className="w-full flex items-center justify-center gap-2 bg-gray-900 hover:bg-black text-white py-2.5 rounded-lg transition-all font-medium shadow-lg active:scale-95"
+            title="Yazdır penceresinden 'PDF Olarak Kaydet' seçeneğini kullanın"
           >
             <Download size={18} />
-            PDF İndir
+            PDF İndir (Yazdır)
           </button>
           <button 
             onClick={() => generateDocx(data)}
@@ -595,7 +589,7 @@ function App() {
       {/* Preview Area */}
       <div className="flex-1 bg-gray-200 overflow-auto flex justify-center p-8 relative">
         <div className="scale-[0.85] origin-top shadow-2xl">
-          <div ref={componentRef}>
+          <div id="print-area">
             <CVPreview data={data} id="resume-preview" />
           </div>
         </div>

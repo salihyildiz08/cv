@@ -25,53 +25,50 @@
       }
       @media print {
         @page { 
-          margin: 10mm; 
-          size: A4;
+          margin: 0;
+          size: auto;
         }
         body { 
           margin: 0; 
           padding: 0; 
           background: white; 
-          -webkit-print-color-adjust: exact;
-          print-color-adjust: exact;
         }
+        
         /* Hide everything by default */
-        body > * { display: none !important; }
-        
-        /* Only show the root and the print container */
-        #root { display: block !important; }
-        #root > div { display: block !important; } /* The main App div */
-        
-        /* Hide sidebar and editor panel */
-        .w-64, .w-96 { display: none !important; }
-        
-        /* Reset the preview area container */
-        .flex-1.bg-gray-200 {
-          background: white !important;
-          padding: 0 !important;
-          margin: 0 !important;
-          overflow: visible !important;
-          display: block !important;
-          position: static !important;
+        body * {
+          visibility: hidden;
         }
-        
-        /* Reset scale and shadow on the preview wrapper */
+
+        /* Show only the print area and its children */
+        #print-area, #print-area * {
+          visibility: visible;
+        }
+
+        /* Position the print area at the very top-left */
+        #print-area {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          z-index: 9999;
+        }
+
+        /* CRITICAL: Reset the scale transform and shadow on the wrapper */
+        /* We target the class used in App.tsx: scale-[0.85] */
         .scale-\[0\.85\] {
           transform: none !important;
           box-shadow: none !important;
           margin: 0 !important;
+          padding: 0 !important;
           width: 100% !important;
         }
-        
-        /* Ensure the CV content is visible */
-        .print-container {
-          display: block !important;
-          width: 100% !important;
-          max-width: none !important;
-          min-height: auto !important;
-          box-shadow: none !important;
-          margin: 0 !important;
-          padding: 0 !important;
+
+        /* Ensure no scrollbars interfere */
+        .overflow-auto, .overflow-y-auto, .overflow-hidden {
+          overflow: visible !important;
+          height: auto !important;
         }
       }
     </style>
