@@ -1,7 +1,9 @@
 import React, { useState, useRef } from 'react';
+import { useReactToPrint } from 'react-to-print';
 import { ResumeData, Experience, Education, Project, Reference, Language } from './types';
 import { CVPreview } from './components/CVPreview';
 import { enhanceText } from './services/geminiService';
+import { generateDocx } from './services/docxService';
 import { 
   Plus, Trash2, Download, Wand2, ChevronDown, ChevronUp, 
   Briefcase, GraduationCap, Code, User, FileText, Settings, Users, Upload, Languages
@@ -9,112 +11,94 @@ import {
 
 // Default State
 const initialData: ResumeData = {
-  themeColor: '#4b5563', // Updated to match the screenshot's dark grey tone
+  themeColor: '#2c3e50', // Professional dark blue/grey
   personalInfo: {
     fullName: 'SALİH YILDIZ',
-    title: 'Full Stack Developer (.NET Focused) | SQL & Integration Systems',
+    title: 'Kıdemli .NET Yazılım Geliştirici | ASP.NET Core | React | Angular',
     email: 'yldzsalih27@gmail.com',
-    phone: '+90 543 282 3301',
-    location: 'Nizip, Gaziantep, Turkey',
+    phone: '0543 282 3301',
+    location: 'Nizip, Gaziantep, Türkiye',
     website: 'https://salihyildiz.runasp.net',
     linkedin: 'https://linkedin.com/in/salih-yildiz-bab4b1181/',
     github: 'https://github.com/salihyildiz08',
-    photoUrl: 'https://picsum.photos/200', // Placeholder, user can upload the real photo
-    summary: "Experienced Full Stack Developer focused on the .NET ecosystem, specializing in data-intensive and integration-heavy enterprise systems. Developed scalable, sustainable, and performance-oriented solutions using ASP.NET Core, Web API, Angular, and React. Following Clean Architecture and N-Tier architecture principles, I have taken end-to-end responsibility in B2B integrations, payments, ordering, reconciliation, and quality control processes. A software developer who prioritizes data integrity, system continuity, and operational efficiency, aligning technical expertise with business goals.",
+    photoUrl: 'https://picsum.photos/200', // Placeholder as requested
+    summary: "Deneyimli bir .NET Yazılım Geliştiricisi olarak kurumsal ölçekli uygulamalar, B2B sistemler, banka entegrasyonları ve süreç otomasyonu projelerinde aktif rol aldım. Backend tarafında ASP.NET Core, Web API ve Entity Framework Core ile ölçeklenebilir ve sürdürülebilir sistemler geliştirirken; frontend tarafında React ve Angular ile modern, performans odaklı ve responsive arayüzler tasarladım.\n\nFarklı sektörlere yönelik çok sayıda kurumsal proje, yönetim paneli, entegrasyon sistemi ve iş otomasyonu uygulaması geliştirme deneyimine sahibim. Clean Architecture prensiplerine uygun, test edilebilir, sürdürülebilir ve yüksek performanslı yazılım geliştirmeye odaklanırım.\n\nPerformans optimizasyonu, doğru mimari tasarım ve temiz kod (Clean Code) yaklaşımı temel çalışma prensiplerim arasındadır.",
   },
   experience: [
     {
       id: '1',
       company: 'Dilek Halı A.Ş.',
-      position: 'Full Stack Developer',
+      position: 'Kıdemli .NET Yazılım Geliştirici',
       startDate: '2022',
-      endDate: 'Present',
-      description: '- Designed and developed end-to-end cargo and payment system integrations within the B2B ecosystem.\n- Achieved approximately 40% improvement in operational efficiency through performance and process optimizations in existing systems.\n- Developed high-performance algorithms to automate order, branding, and production workflows.\n- Implemented updates focused on data accuracy and system continuity for financial data, ordering, and quality control processes.'
-    },
-    {
-      id: '2',
-      company: 'Eksen Ofis Mobilyaları A.Ş.',
-      position: 'Full Stack Developer',
-      startDate: '2020',
-      endDate: '2022',
-      description: '- Automated bank reconciliations and customer account management processes using Web API-based services.\n- Increased business process speed and efficiency by approximately 30% through information management projects.\n- Minimized production errors and ensured end-to-end traceability by developing tracking systems integrated with QR codes and quality control.'
+      endDate: 'Günümüz',
+      description: '• ASP.NET Core ve EF Core kullanarak kurumsal ölçekli B2B Sipariş Yönetim Sistemi geliştirdim.\n• React ve Angular kullanarak modern, dinamik ve responsive kullanıcı arayüzleri tasarladım.\n• RESTful API servisleri geliştirerek frontend ve backend sistemler arasında güçlü entegrasyon sağladım.\n• Banka ödeme sistemleri ile entegrasyon geliştirerek otomatik ödeme doğrulama ve işlem yönetimi sağladım.\n• SignalR ile gerçek zamanlı bildirim ve veri güncelleme altyapısı kurdum.\n• Clean Architecture yapısını projelere entegre ederek sürdürülebilir yazılım mimarisi oluşturdum.\n• MSSQL üzerinde performans odaklı sorgular ve indeks optimizasyonu yaparak sistem performansını artırdım.\n• JWT tabanlı kimlik doğrulama ve rol bazlı yetkilendirme sistemleri geliştirdim.\n• Admin panel, raporlama sistemleri ve yönetim modülleri geliştirdim.\n\nBaşlıca Kazanımlar:\n• Sistem performansında %30+ iyileştirme\n• Manuel iş süreçlerinin otomasyonu ile operasyonel verimlilik artışı\n• Ölçeklenebilir ve modüler yazılım mimarisi kurulumu'
     }
   ],
   education: [
     {
       id: '1',
-      school: 'İskenderun Technical University',
-      degree: 'B.S. in Computer Engineering',
-      startDate: '2016',
-      endDate: '2020',
+      school: 'İskenderun Teknik Üniversitesi',
+      degree: 'Lisans – Bilgisayar Mühendisliği',
+      startDate: '',
+      endDate: '',
       description: ''
     }
   ],
   projects: [
     {
       id: '1',
-      name: 'B2B Order Management',
+      name: 'B2B Sipariş ve Bayi Yönetim Sistemi',
       link: '',
-      description: 'Design of algorithms to optimize dealer stock, production, and ordering processes.',
-      technologies: ['ASP.NET Core', 'Angular', 'N-Tier Architecture']
+      description: '• Bayi sipariş süreçlerini yöneten uçtan uca sistem geliştirdim.\n• Gerçek zamanlı stok takibi ve sipariş güncelleme sistemi kurdum.\n• REST API tabanlı mikro servis benzeri yapı tasarladım.\n• Rol bazlı yetkilendirme ve güvenli veri yönetimi sağladım.',
+      technologies: ['ASP.NET Core', 'EF Core', 'MSSQL', 'React / Angular', 'SignalR']
     },
     {
       id: '2',
-      name: 'Bank Statements / Account Summaries',
+      name: 'Banka Entegrasyon ve Ödeme Sistemi',
       link: '',
-      description: 'Automating statement and summary data flows via multi-bank API integration.',
-      technologies: ['ASP.NET Core 8', 'Angular', 'Clean Architecture']
+      description: '• Banka API entegrasyonu ile ödeme doğrulama sistemi geliştirdim.\n• Güvenli veri iletişimi ve hata yönetim mekanizmaları oluşturdum.\n• Loglama ve hata takip altyapısı kurdum.',
+      technologies: ['ASP.NET Core Web API', 'REST', 'MSSQL']
     },
     {
       id: '3',
-      name: 'Quality Control System',
+      name: 'Süreç Otomasyon ve Raporlama Sistemi',
       link: '',
-      description: 'Real-time tracking and 35% efficiency increase in production processes via an Android-based mobile application.',
-      technologies: ['ASP.NET Core 6', 'Web API']
-    },
-    {
-      id: '4',
-      name: 'QR Code Order & Management',
-      link: '',
-      description: 'Real-time order management and instant notification infrastructure using SignalR integration.',
-      technologies: ['SignalR']
-    },
-    {
-      id: '5',
-      name: 'In-Company Communication & Info Project',
-      link: '',
-      description: 'A system that improved internal communication processes and reduced disruptions by 80%.',
-      technologies: ['ASP.NET Core 6', 'Bootstrap', 'JS']
+      description: '• İş süreçlerini dijitalleştiren otomasyon modülleri geliştirdim.\n• Dinamik raporlama ve dashboard ekranları tasarladım.\n• Performans odaklı veritabanı mimarisi oluşturup optimize ettim.',
+      technologies: ['ASP.NET Core', 'EF Core', 'SQL Server', 'React']
     }
   ],
   skills: [
     {
       category: 'Backend',
-      items: ['.NET', '.NET Core', 'ASP.NET Core Web API', 'SignalR']
+      items: ['ASP.NET Core MVC', 'ASP.NET Core Web API', 'Entity Framework Core', 'LINQ', 'RESTful API Development', 'Clean Architecture', 'N-Tier Architecture', 'Repository Pattern', 'Dependency Injection', 'SignalR', 'Authentication & Authorization (JWT, Role-Based)']
     },
     {
       category: 'Frontend',
-      items: ['Angular', 'React', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Bootstrap']
+      items: ['React.js', 'Angular', 'Razor Pages', 'HTML5, CSS3', 'Bootstrap', 'JavaScript (ES6+)', 'jQuery', 'DataTables', 'Toastr']
     },
     {
-      category: 'Database',
-      items: ['MS SQL Server (T-SQL, Stored Procedures, Performance Optimization)', 'PostgreSQL', 'MongoDB']
+      category: 'Veritabanı',
+      items: ['Microsoft SQL Server', 'MYSQL', 'MongoDB', 'SQLite', 'PostreSQL']
     },
     {
-      category: 'Architecture & Tools',
-      items: ['Clean Architecture', 'N-Tier Architecture', 'Microservice Approaches', 'Docker', 'Git']
+      category: 'Araçlar & DevOps',
+      items: ['Git & GitHub', 'Postman', 'IIS Deployment', 'Basic Docker Knowledge', 'REST API Testing', 'Agile / Scrum Süreçleri']
+    },
+    {
+      category: 'Profesyonel Yetkinlikler',
+      items: ['Analitik düşünme ve problem çözme', 'Temiz Kod (Clean Code) prensipleri', 'Performans optimizasyonu', 'Ölçeklenebilir sistem tasarımı', 'Takım çalışması ve teknik mentorluk', 'Hızlı adaptasyon ve öğrenme yeteneği']
     }
   ],
   languages: [
-    { id: '1', name: 'English', level: 'B1 Level' }
+    { id: '1', name: 'İngilizce', level: 'Profesyonel Çalışma Düzeyi' }
   ],
   references: [
     { 
       id: '1', 
-      name: 'Murat Dağ', 
-      company: 'INTERTECH - Software Quality Assurance Engineer', 
+      name: 'Talep üzerine paylaşılacaktır.', 
+      company: '', 
       email: '', 
-      phone: '+90 542 842 51 00' 
+      phone: '' 
     }
   ]
 };
@@ -265,35 +249,15 @@ function App() {
     setIsGenerating(false);
   };
 
+  const componentRef = useRef<HTMLDivElement>(null);
+
+  const handlePrint = useReactToPrint({
+    contentRef: componentRef,
+    documentTitle: `${data.personalInfo.fullName.replace(/\s+/g, '_')}_CV`,
+  });
+
   const downloadPdf = () => {
-    const element = document.getElementById('resume-preview');
-    if (!element) return;
-    
-    // Normalize filename (replace Turkish chars and spaces)
-    const fileNameSafe = data.personalInfo.fullName
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .replace(/[^a-zA-Z0-9]/g, "_");
-      // Removed .toUpperCase() to prevent all caps filename if not desired
-
-    // Scroll to top to ensure full capture
-    window.scrollTo(0, 0);
-
-    // @ts-ignore
-    if (window.html2pdf) {
-      const opt = {
-        margin: 0,
-        filename: `${fileNameSafe}_CV.pdf`,
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2, useCORS: true, scrollY: 0 },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-        pagebreak: { mode: ['css', 'legacy'] }
-      };
-      // @ts-ignore
-      window.html2pdf().set(opt).from(element).save();
-    } else {
-      window.print();
-    }
+    handlePrint();
   };
 
   // UI Components for Editor Sections
@@ -336,13 +300,20 @@ function App() {
           {renderSidebarItem('settings', 'Ayarlar', <Settings size={18} />)}
         </nav>
 
-        <div className="p-4 border-t bg-gray-50">
+        <div className="p-4 border-t bg-gray-50 space-y-3">
           <button 
             onClick={downloadPdf}
             className="w-full flex items-center justify-center gap-2 bg-gray-900 hover:bg-black text-white py-2.5 rounded-lg transition-all font-medium shadow-lg active:scale-95"
           >
             <Download size={18} />
             PDF İndir
+          </button>
+          <button 
+            onClick={() => generateDocx(data)}
+            className="w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white py-2.5 rounded-lg transition-all font-medium shadow-lg active:scale-95"
+          >
+            <FileText size={18} />
+            Word (DOCX) İndir
           </button>
         </div>
       </div>
@@ -624,7 +595,9 @@ function App() {
       {/* Preview Area */}
       <div className="flex-1 bg-gray-200 overflow-auto flex justify-center p-8 relative">
         <div className="scale-[0.85] origin-top shadow-2xl">
-          <CVPreview data={data} id="resume-preview" />
+          <div ref={componentRef}>
+            <CVPreview data={data} id="resume-preview" />
+          </div>
         </div>
       </div>
     </div>
