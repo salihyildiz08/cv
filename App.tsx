@@ -13,24 +13,32 @@ const initialData: ResumeData = {
   themeColor: '#2c3e50', // Professional dark blue/grey
   personalInfo: {
     fullName: 'SALİH YILDIZ',
-    title: 'Senior .NET Backend Developer',
+    title: 'Senior .NET Backend Developer | ASP.NET Core | Web API | React',
     email: 'yldzsalih27@gmail.com',
     phone: '0543 282 3301',
-    location: 'Nizip, Gaziantep, Türkiye',
+    location: 'Gaziantep, Türkiye',
     website: 'https://salihyildiz.runasp.net',
     linkedin: 'https://linkedin.com/in/salih-yildiz-bab4b1181/',
     github: 'https://github.com/salihyildiz08',
     photoUrl: 'https://picsum.photos/200', // Placeholder
-    summary: "5+ yıllık deneyime sahip Senior .NET Backend Developer olarak ölçeklenebilir ve yüksek performanslı ASP.NET Core Web API uygulamaları geliştirmekteyim. Clean Architecture, SOLID prensipleri ve modern tasarım kalıplarına uygun sürdürülebilir sistemler tasarlama konusunda uzmanım. RESTful API geliştirme, Entity Framework Core, SQL Server performans optimizasyonu, caching stratejileri (In-Memory / Redis), Serilog ile structured logging ve JWT tabanlı kimlik doğrulama konularında deneyim sahibiyim. Unit testing (xUnit, Moq) ile test edilebilir ve güvenilir yazılım geliştirmeye odaklanırım. Kurumsal B2B sistemler, ödeme entegrasyonları ve gerçek zamanlı uygulamalar geliştirme deneyimim bulunmaktadır.",
+    summary: "5+ yıllık deneyime sahip Senior .NET Developer olarak ölçeklenebilir ve yüksek performanslı ASP.NET Core Web API uygulamaları geliştirmekteyim. Clean Architecture, SOLID prensipleri ve modern tasarım kalıplarına uygun sürdürülebilir sistemler tasarlama konusunda deneyimliyim. RESTful API geliştirme, Entity Framework Core, SQL Server performans optimizasyonu, caching (In-Memory, Redis), Serilog ile structured logging ve JWT tabanlı kimlik doğrulama konularında uzmanım. Unit testing (xUnit, Moq) ile test edilebilir ve güvenilir sistemler geliştirmekteyim. Kurumsal B2B platformlar, ödeme entegrasyonları ve gerçek zamanlı uygulamalar geliştirme deneyimine sahibim.",
   },
   experience: [
     {
       id: '1',
       company: 'Dilek Halı A.Ş.',
-      position: 'Kıdemli .NET Yazılım Geliştirici',
+      position: 'Senior .NET Developer',
       startDate: '2022',
       endDate: 'Günümüz',
-      description: '• ASP.NET Core ve EF Core kullanarak kurumsal ölçekli B2B Sipariş Yönetim Sistemi geliştirdim.\n• RESTful API mimarisi kurarak frontend ve backend arasında güçlü entegrasyon sağladım.\n• SQL Server üzerinde indeksleme ve sorgu optimizasyonu yaparak sistem performansını %30+ artırdım.\n• In-Memory ve Redis caching stratejileri uygulayarak API response sürelerini iyileştirdim.\n• Serilog ile structured logging altyapısı kurarak hata takibini ve sistem izlemeyi geliştirdim.\n• xUnit ve Moq kullanarak kritik business logic için unit testler yazdım.\n• JWT tabanlı kimlik doğrulama ve rol bazlı yetkilendirme sistemi geliştirdim.\n• SignalR kullanarak gerçek zamanlı bildirim altyapısı kurdum.\n• Clean Architecture prensipleri ile modüler ve sürdürülebilir sistem mimarisi tasarladım.\n• Banka API entegrasyonları ile güvenli ödeme doğrulama süreçleri geliştirdim.'
+      description: '• ASP.NET Core ve EF Core kullanarak kurumsal ölçekli B2B Sipariş Yönetim Sistemi geliştirdim.\n• RESTful API mimarisi tasarlayarak frontend ve backend entegrasyonunu sağladım.\n• SQL Server üzerinde indeksleme ve sorgu optimizasyonu yaparak sistem performansını %30+ artırdım.\n• In-Memory ve Redis caching stratejileri uygulayarak API response sürelerini iyileştirdim.\n• Serilog ile structured logging altyapısı kurarak sistem izleme ve hata takibini geliştirdim.\n• Global exception handling middleware geliştirdim.\n• xUnit ve Moq kullanarak kritik business logic için unit testler yazdım.\n• JWT tabanlı kimlik doğrulama ve rol bazlı yetkilendirme sistemi geliştirdim.\n• SignalR ile gerçek zamanlı bildirim altyapısı kurdum.\n• API versioning yapısı tasarladım ve yönettim.\n• Teknik mimari karar süreçlerinde aktif rol aldım ve code review süreçlerine katkı sağladım.\n• Banka API entegrasyonları ile güvenli ödeme doğrulama sistemleri geliştirdim.'
+    },
+    {
+      id: '2',
+      company: 'Eksen Mobilya A.Ş.',
+      position: '.NET Developer',
+      startDate: '2020',
+      endDate: '2022',
+      description: '• ASP.NET Core ve Web API kullanarak şirket içi otomasyon sistemleri geliştirdim.\n• Angular ile dinamik ve kullanıcı dostu arayüzler tasarladım.\n• SQL Server üzerinde veri modelleme ve sorgu optimizasyonu gerçekleştirdim.\n• Şirket içi iletişim, kalite kontrol ve sipariş yönetimi sistemleri geliştirdim.\n• İş süreçlerini dijitalleştirerek operasyonel verimliliği artırdım.'
     }
   ],
   education: [
@@ -38,8 +46,8 @@ const initialData: ResumeData = {
       id: '1',
       school: 'İskenderun Teknik Üniversitesi',
       degree: 'Bilgisayar Mühendisliği Lisans',
-      startDate: '',
-      endDate: '',
+      startDate: '2016',
+      endDate: '2020',
       description: ''
     }
   ],
@@ -48,31 +56,40 @@ const initialData: ResumeData = {
       id: '1',
       name: 'B2B Sipariş ve Bayi Yönetim Sistemi',
       link: '',
-      description: '• Bayi sipariş süreçlerini yöneten uçtan uca sistem geliştirdim.\n• Gerçek zamanlı stok takibi ve sipariş güncelleme altyapısı kurdum.\n• Rol bazlı yetkilendirme ve güvenli veri yönetimi sağladım.',
-      technologies: ['ASP.NET Core', 'EF Core', 'SQL Server', 'React', 'SignalR']
+      description: '• Bayi sipariş ve üretim süreçlerini yöneten uçtan uca sistem geliştirdim.\n• PayTR ve IPara ödeme sistemleri entegrasyonu gerçekleştirdim.\n• Rol bazlı yetkilendirme ve güvenli veri yönetimi sağladım.\n• Performans odaklı veri mimarisi tasarladım.',
+      technologies: ['ASP.NET Core 6', 'Web API', 'EF Core', 'SQL Server', 'React', 'SignalR']
     },
     {
       id: '2',
-      name: 'Banka Entegrasyon ve Ödeme Sistemi',
+      name: 'Banka Ekstre ve Hesap Özet Sistemi',
       link: '',
-      description: '• Banka API entegrasyonu ile otomatik ödeme doğrulama sistemi geliştirdim.\n• Güvenli veri iletişimi ve hata yönetim mekanizmaları oluşturdum.',
-      technologies: ['ASP.NET Core Web API', 'REST', 'SQL Server']
+      description: '• Banka API servisleri ile entegrasyon sağlayarak dinamik hesap takibi sistemi geliştirdim.\n• Kullanıcı rol yönetimi ve güvenli veri erişim mekanizması tasarladım.',
+      technologies: ['ASP.NET Core 8', 'Web API', 'Angular', 'SQL Server']
+    },
+    {
+      id: '3',
+      name: 'QR Kodlu Sipariş ve Yönetim Sistemi',
+      link: '',
+      description: '• Gerçek zamanlı sipariş yönetim sistemi geliştirdim.\n• QR kod entegrasyonu ile sipariş doğrulama ve takip altyapısı kurdum.\n• SignalR ile anlık bildirim ve mesajlaşma sistemi geliştirdim.',
+      technologies: ['ASP.NET Core', 'Angular', 'SignalR']
     }
   ],
   skills: [
     { category: 'Programlama Dilleri', items: ['C#', 'JavaScript'] },
-    { category: 'Backend', items: ['ASP.NET Core', 'Web API', 'Entity Framework Core', 'LINQ'] },
-    { category: 'Frontend', items: ['React', 'Angular', 'Razor Pages', 'Bootstrap'] },
+    { category: 'Backend', items: ['ASP.NET Core', '.NET Core', 'Web API', 'Entity Framework Core', 'LINQ'] },
+    { category: 'Frontend', items: ['React', 'Angular', 'Razor Pages', 'Bootstrap', 'HTML5', 'CSS3'] },
     { category: 'Mimari & Prensipler', items: ['Clean Architecture', 'N-Tier Architecture', 'SOLID', 'Design Patterns', 'Dependency Injection'] },
     { category: 'Veritabanı', items: ['SQL Server', 'PostgreSQL', 'MongoDB', 'MySQL'] },
     { category: 'Caching & Performans', items: ['In-Memory Caching', 'Redis', 'SQL Index Optimization'] },
-    { category: 'Logging & İzleme', items: ['Serilog', 'Structured Logging', 'Exception Handling'] },
-    { category: 'Testing', items: ['Unit Testing (xUnit / NUnit)', 'Moq'] },
+    { category: 'Logging & Monitoring', items: ['Serilog', 'Structured Logging', 'Global Exception Handling'] },
+    { category: 'Testing', items: ['Unit Testing (xUnit, NUnit)', 'Moq'] },
     { category: 'Authentication & Security', items: ['JWT', 'Role-Based Authorization'] },
-    { category: 'Araçlar', items: ['Git', 'GitHub', 'Docker (Temel Seviye)', 'IIS', 'Postman'] }
+    { category: 'Araçlar', items: ['Git', 'GitHub', 'Docker (Temel Seviye)', 'IIS', 'Postman'] },
+    { category: 'Diğer', items: ['RESTful API Development', 'API Versioning', 'Middleware Development'] }
   ],
   languages: [
-    { id: '1', name: 'İngilizce', level: 'B2 – Profesyonel Çalışma Düzeyi' }
+    { id: '1', name: 'İngilizce', level: 'B2 – Profesyonel Çalışma Düzeyi' },
+    { id: '2', name: 'Almanca', level: 'A1' }
   ],
   references: [
     { 

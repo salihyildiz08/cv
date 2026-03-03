@@ -133,67 +133,18 @@ export const generateDocx = (data: ResumeData) => {
             }),
           ] : []),
 
-          // --- SKILLS (2-Column Table) ---
+          // --- SKILLS (Simple List - No Tables) ---
           ...(skills.length > 0 ? [
             createSectionHeader("Teknik Yetkinlikler"),
-            new Table({
-              width: {
-                size: 100,
-                type: WidthType.PERCENTAGE,
-              },
-              borders: {
-                top: { style: BorderStyle.NONE },
-                bottom: { style: BorderStyle.NONE },
-                left: { style: BorderStyle.NONE },
-                right: { style: BorderStyle.NONE },
-                insideVertical: { style: BorderStyle.NONE },
-                insideHorizontal: { style: BorderStyle.NONE },
-              },
-              rows: skills.reduce((rows, group, index) => {
-                // Create a new row for every 2 items (or just list them if we want a simple list)
-                // The preview uses a grid. Let's make a row for each category to keep it clean in Word.
-                // Actually, the preview maps each group to a div. Let's just list them.
-                // To match "grid-cols-2", we can pair them up.
-                if (index % 2 === 0) {
-                  const group1 = skills[index];
-                  const group2 = skills[index + 1];
-
-                  rows.push(
-                    new TableRow({
-                      children: [
-                        new TableCell({
-                          width: { size: 50, type: WidthType.PERCENTAGE },
-                          children: [
-                            new Paragraph({
-                              children: [createText(group1.category, { bold: true })],
-                              spacing: { after: 50 },
-                            }),
-                            new Paragraph({
-                              children: [createText(group1.items.join(", "))],
-                              spacing: { after: 200 },
-                            }),
-                          ],
-                        }),
-                        new TableCell({
-                          width: { size: 50, type: WidthType.PERCENTAGE },
-                          children: group2 ? [
-                            new Paragraph({
-                              children: [createText(group2.category, { bold: true })],
-                              spacing: { after: 50 },
-                            }),
-                            new Paragraph({
-                              children: [createText(group2.items.join(", "))],
-                              spacing: { after: 200 },
-                            }),
-                          ] : [],
-                        }),
-                      ],
-                    })
-                  );
-                }
-                return rows;
-              }, [] as TableRow[]),
-            }),
+            ...skills.map(group => 
+              new Paragraph({
+                spacing: { after: 100 },
+                children: [
+                  createText(group.category + ": ", { bold: true }),
+                  createText(group.items.join(", ")),
+                ],
+              })
+            ),
             new Paragraph({ text: "", spacing: { after: 100 } }),
           ] : []),
 
