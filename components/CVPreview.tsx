@@ -18,7 +18,7 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
   return (
     <div 
       id={id}
-      className="bg-white text-gray-900 print-container mx-auto p-12 max-w-[210mm] min-h-[297mm] shadow-none print:max-w-none print:w-full print:p-10 print:mx-0"
+      className="bg-white text-gray-900 print-container mx-auto p-12 max-w-[210mm] min-h-[297mm] shadow-none print:max-w-none print:w-[100%] print:p-[10mm] print:mx-0"
       style={{ 
         fontFamily: 'Arial, Helvetica, sans-serif', // Standard ATS font
         lineHeight: '1.5',
