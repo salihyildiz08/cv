@@ -18,7 +18,7 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
   return (
     <div 
       id={id}
-      className="bg-white text-gray-900 print-container mx-auto p-12 max-w-[210mm] min-h-[297mm] shadow-none"
+      className="bg-white text-gray-900 print-container mx-auto p-12 max-w-[210mm] min-h-[297mm] shadow-none print:max-w-none print:w-full print:p-10 print:mx-0"
       style={{ 
         fontFamily: 'Arial, Helvetica, sans-serif', // Standard ATS font
         lineHeight: '1.5',
@@ -26,9 +26,9 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
       }}
     >
       {/* Header */}
-      <header className="border-b-2 border-gray-800 pb-6 mb-6 flex items-center gap-6">
+      <header className="border-b-2 border-gray-800 pb-6 mb-6 flex items-center gap-6 print:flex-row">
         {personalInfo.photoUrl && (
-          <div className="w-32 h-32 shrink-0 rounded-full overflow-hidden border-2 border-gray-200 shadow-sm">
+          <div className="w-32 h-32 shrink-0 rounded-full overflow-hidden border-2 border-gray-200 shadow-sm print:w-32 print:h-32">
             <img 
               src={personalInfo.photoUrl} 
               alt={personalInfo.fullName} 
@@ -37,10 +37,10 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
           </div>
         )}
         <div className="flex-1">
-          <h1 className="text-4xl font-bold uppercase tracking-wide mb-2 text-left">{personalInfo.fullName}</h1>
-          <h2 className="text-xl font-medium text-left mb-4 text-gray-700">{personalInfo.title}</h2>
+          <h1 className="text-4xl font-bold uppercase tracking-wide mb-2 text-left print:text-4xl">{personalInfo.fullName}</h1>
+          <h2 className="text-xl font-medium text-left mb-4 text-gray-700 print:text-xl">{personalInfo.title}</h2>
           
-          <div className="flex flex-wrap justify-start gap-x-4 gap-y-2 text-sm text-gray-700">
+          <div className="flex flex-wrap justify-start gap-x-4 gap-y-2 text-sm text-gray-700 print:flex-wrap">
             {personalInfo.location && (
               <span className="flex items-center gap-1">
                 <MapPin size={14} /> {personalInfo.location}
@@ -79,7 +79,7 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
 
       {/* Summary */}
       {personalInfo.summary && (
-        <section className="mb-6">
+        <section className="mb-6 break-inside-avoid">
           <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-3 pb-1">Profesyonel Özet</h3>
           <p className="text-sm text-justify whitespace-pre-line">
             {personalInfo.summary}
@@ -89,15 +89,15 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
 
       {/* Skills */}
       {skills.length > 0 && (
-        <section className="mb-6">
+        <section className="mb-6 break-inside-avoid">
           <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-3 pb-1">Teknik Yetkinlikler</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+          <div className="grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 gap-4 text-sm">
             {skills.map((group, idx) => (
               <div key={idx} className="break-inside-avoid">
                 <h4 className="font-bold mb-1">{group.category}</h4>
                 <ul className="list-disc list-inside text-gray-700">
                   {group.items.map((skill, i) => (
-                    <li key={i} className="inline-block mr-4 md:block md:mr-0">
+                    <li key={i} className="inline-block mr-4 md:block md:mr-0 print:block print:mr-0">
                       {skill}
                     </li>
                   ))}
