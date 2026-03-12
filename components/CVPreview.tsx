@@ -18,7 +18,7 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
   return (
     <div 
       id={id}
-      className="bg-white text-gray-900 print-container mx-auto p-12 max-w-[210mm] min-h-[297mm] shadow-none print:max-w-none print:w-[100%] print:p-[10mm] print:mx-0"
+      className="bg-white text-gray-900 print-container mx-auto p-12 max-w-[210mm] min-h-[297mm] shadow-none print:max-w-none print:w-full print:p-[15mm] print:mx-0 print:min-h-0"
       style={{ 
         fontFamily: 'Arial, Helvetica, sans-serif', // Standard ATS font
         lineHeight: '1.5',
@@ -79,9 +79,9 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
 
       {/* Summary */}
       {personalInfo.summary && (
-        <section className="mb-6 break-inside-avoid">
-          <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-3 pb-1">Professional Summary</h3>
-          <p className="text-sm text-justify whitespace-pre-line">
+        <section className="mb-8 break-inside-avoid">
+          <h3 className="text-lg font-bold uppercase border-b-2 border-gray-300 mb-3 pb-1">Professional Summary</h3>
+          <p className="text-sm text-left whitespace-pre-line leading-relaxed">
             {personalInfo.summary}
           </p>
         </section>
@@ -89,19 +89,15 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
 
       {/* Skills */}
       {skills.length > 0 && (
-        <section className="mb-6 break-inside-avoid">
-          <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-3 pb-1">Technical Skills</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 gap-4 text-sm">
+        <section className="mb-8 break-inside-avoid">
+          <h3 className="text-lg font-bold uppercase border-b-2 border-gray-300 mb-3 pb-1">Technical Skills</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 gap-x-8 gap-y-4 text-sm">
             {skills.map((group, idx) => (
               <div key={idx} className="break-inside-avoid">
-                <h4 className="font-bold mb-1">{group.category}</h4>
-                <ul className="list-disc list-inside text-gray-700">
-                  {group.items.map((skill, i) => (
-                    <li key={i} className="inline-block mr-4 md:block md:mr-0 print:block print:mr-0">
-                      {skill}
-                    </li>
-                  ))}
-                </ul>
+                <h4 className="font-bold mb-1 text-gray-800">{group.category}</h4>
+                <p className="text-gray-700 leading-relaxed">
+                  {group.items.join(', ')}
+                </p>
               </div>
             ))}
           </div>
@@ -110,19 +106,19 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
 
       {/* Experience */}
       {experience.length > 0 && (
-        <section className="mb-6">
-          <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-3 pb-1">Experience</h3>
-          <div className="space-y-5">
+        <section className="mb-8">
+          <h3 className="text-lg font-bold uppercase border-b-2 border-gray-300 mb-3 pb-1">Experience</h3>
+          <div className="space-y-6">
             {experience.map((exp) => (
               <div key={exp.id} className="break-inside-avoid">
                 <div className="flex justify-between items-baseline mb-1">
-                  <h4 className="font-bold text-md">{exp.position}</h4>
-                  <span className="text-sm font-medium text-gray-600 italic">
+                  <h4 className="font-bold text-md text-gray-900">{exp.position}</h4>
+                  <span className="text-sm font-bold text-gray-700">
                     {exp.startDate} – {exp.endDate}
                   </span>
                 </div>
-                <div className="text-sm font-semibold text-gray-700 mb-2">{exp.company}</div>
-                <div className="text-sm text-gray-700 whitespace-pre-line pl-4">
+                <div className="text-sm font-bold text-gray-800 mb-2">{exp.company}</div>
+                <div className="text-sm text-gray-700 whitespace-pre-line pl-2 border-l-2 border-gray-100">
                   {exp.description}
                 </div>
               </div>
@@ -133,13 +129,13 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
 
       {/* Projects */}
       {projects.length > 0 && (
-        <section className="mb-6">
-          <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-3 pb-1">Projects</h3>
-          <div className="space-y-4">
+        <section className="mb-8">
+          <h3 className="text-lg font-bold uppercase border-b-2 border-gray-300 mb-3 pb-1">Projects</h3>
+          <div className="space-y-6">
             {projects.map((proj) => (
               <div key={proj.id} className="break-inside-avoid">
                 <div className="flex justify-between items-baseline mb-1">
-                  <h4 className="font-bold text-md">{proj.name}</h4>
+                  <h4 className="font-bold text-md text-gray-900">{proj.name}</h4>
                   {proj.link && (
                     <a href={proj.link} target="_blank" rel="noreferrer" className="text-xs text-blue-600 hover:underline">
                       [Link]
@@ -147,11 +143,11 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
                   )}
                 </div>
                 {proj.technologies.length > 0 && (
-                  <div className="text-xs text-gray-600 italic mb-1">
+                  <div className="text-xs text-gray-600 italic mb-2">
                     Technologies: {proj.technologies.join(', ')}
                   </div>
                 )}
-                <div className="text-sm text-gray-700 whitespace-pre-line pl-4">
+                <div className="text-sm text-gray-700 whitespace-pre-line pl-2 border-l-2 border-gray-100">
                   {proj.description}
                 </div>
               </div>
@@ -162,19 +158,19 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
 
       {/* Education */}
       {education.length > 0 && (
-        <section className="mb-6">
-          <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-3 pb-1">Education</h3>
-          <div className="space-y-3">
+        <section className="mb-8">
+          <h3 className="text-lg font-bold uppercase border-b-2 border-gray-300 mb-3 pb-1">Education</h3>
+          <div className="space-y-4">
             {education.map((edu) => (
               <div key={edu.id} className="break-inside-avoid">
                 <div className="flex justify-between items-baseline">
-                  <h4 className="font-bold text-md">{edu.school}</h4>
-                  <span className="text-sm text-gray-600 italic">
+                  <h4 className="font-bold text-md text-gray-900">{edu.school}</h4>
+                  <span className="text-sm font-bold text-gray-700">
                     {edu.startDate} {edu.endDate ? `– ${edu.endDate}` : ''}
                   </span>
                 </div>
-                <div className="text-sm text-gray-700">{edu.degree}</div>
-                {edu.description && <div className="text-sm text-gray-600 mt-1">{edu.description}</div>}
+                <div className="text-sm font-bold text-gray-800">{edu.degree}</div>
+                {edu.description && <div className="text-sm text-gray-600 mt-1 pl-2 border-l-2 border-gray-100">{edu.description}</div>}
               </div>
             ))}
           </div>
@@ -183,12 +179,12 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
 
       {/* Languages */}
       {languages && languages.length > 0 && (
-        <section className="mb-6">
-          <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-3 pb-1">Languages</h3>
-          <ul className="list-disc list-inside text-sm text-gray-700">
+        <section className="mb-8">
+          <h3 className="text-lg font-bold uppercase border-b-2 border-gray-300 mb-3 pb-1">Languages</h3>
+          <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
             {languages.map((lang) => (
               <li key={lang.id} className="break-inside-avoid">
-                <span className="font-semibold">{lang.name}:</span> {lang.level}
+                <span className="font-bold text-gray-800">{lang.name}:</span> {lang.level}
               </li>
             ))}
           </ul>
@@ -197,14 +193,16 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
 
       {/* References */}
       {references.length > 0 && (
-        <section className="mb-6">
-          <h3 className="text-lg font-bold uppercase border-b border-gray-300 mb-3 pb-1">References</h3>
-          <div className="text-sm text-gray-700">
+        <section className="mb-8">
+          <h3 className="text-lg font-bold uppercase border-b-2 border-gray-300 mb-3 pb-1">References</h3>
+          <div className="text-sm text-gray-700 space-y-2">
             {references.map((ref) => (
               <div key={ref.id} className="break-inside-avoid">
-                {ref.name} {ref.company ? `– ${ref.company}` : ''} 
-                {ref.email ? ` | ${ref.email}` : ''}
-                {ref.phone ? ` | ${ref.phone}` : ''}
+                <span className="font-bold text-gray-800">{ref.name}</span> {ref.company ? `– ${ref.company}` : ''} 
+                <div className="text-xs text-gray-600">
+                  {ref.email ? `${ref.email}` : ''}
+                  {ref.phone ? ` | ${ref.phone}` : ''}
+                </div>
               </div>
             ))}
           </div>
