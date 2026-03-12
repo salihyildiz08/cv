@@ -12,16 +12,16 @@ import {
 const initialData: ResumeData = {
   themeColor: '#2c3e50', // Professional dark blue/grey
   personalInfo: {
-    fullName: 'SALİH YILDIZ',
-    title: 'Senior .NET Backend Developer | ASP.NET Core | Web API | React',
+    fullName: 'SALIH YILDIZ',
+    title: 'Senior .NET Backend Developer | ASP.NET Core | ASP.NET MVC | Web API | Clean Architecture',
     email: 'yldzsalih27@gmail.com',
     phone: '0543 282 3301',
-    location: 'Gaziantep, Türkiye',
+    location: 'Gaziantep, Turkey',
     website: 'https://salihyildiz.runasp.net',
     linkedin: 'https://linkedin.com/in/salih-yildiz-bab4b1181/',
     github: 'https://github.com/salihyildiz08',
     photoUrl: 'https://picsum.photos/200', // Placeholder
-    summary: "5+ yıllık deneyime sahip Senior .NET Developer olarak ölçeklenebilir ve yüksek performanslı ASP.NET Core Web API uygulamaları geliştirmekteyim. Clean Architecture, SOLID prensipleri ve modern tasarım kalıplarına uygun sürdürülebilir sistemler tasarlama konusunda deneyimliyim. RESTful API geliştirme, Entity Framework Core, SQL Server performans optimizasyonu, caching (In-Memory, Redis), Serilog ile structured logging ve JWT tabanlı kimlik doğrulama konularında uzmanım. Unit testing (xUnit, Moq) ile test edilebilir ve güvenilir sistemler geliştirmekteyim. Kurumsal B2B platformlar, ödeme entegrasyonları ve gerçek zamanlı uygulamalar geliştirme deneyimine sahibim.",
+    summary: ".NET developer with 5+ years of experience building scalable and high-performance backend systems using ASP.NET Core, ASP.NET MVC and Web API.\n\nExperienced in designing maintainable and scalable architectures following Clean Architecture and SOLID principles. Strong background in RESTful API development, Entity Framework Core, SQL Server performance optimization, Redis caching, structured logging with Serilog, and JWT-based authentication.\n\nHands-on experience with payment system integrations, real-time applications using SignalR, and Agile/Scrum development environments.",
   },
   experience: [
     {
@@ -29,8 +29,8 @@ const initialData: ResumeData = {
       company: 'Dilek Halı A.Ş.',
       position: 'Senior .NET Developer',
       startDate: '2022',
-      endDate: 'Günümüz',
-      description: '• ASP.NET Core ve EF Core kullanarak kurumsal ölçekli B2B Sipariş Yönetim Sistemi geliştirdim.\n• RESTful API mimarisi tasarlayarak frontend ve backend entegrasyonunu sağladım.\n• SQL Server üzerinde indeksleme ve sorgu optimizasyonu yaparak sistem performansını %30+ artırdım.\n• In-Memory ve Redis caching stratejileri uygulayarak API response sürelerini iyileştirdim.\n• Serilog ile structured logging altyapısı kurarak sistem izleme ve hata takibini geliştirdim.\n• Global exception handling middleware geliştirdim.\n• xUnit ve Moq kullanarak kritik business logic için unit testler yazdım.\n• JWT tabanlı kimlik doğrulama ve rol bazlı yetkilendirme sistemi geliştirdim.\n• SignalR ile gerçek zamanlı bildirim altyapısı kurdum.\n• API versioning yapısı tasarladım ve yönettim.\n• Teknik mimari karar süreçlerinde aktif rol aldım ve code review süreçlerine katkı sağladım.\n• Banka API entegrasyonları ile güvenli ödeme doğrulama sistemleri geliştirdim.'
+      endDate: 'Present',
+      description: '• Developed enterprise-level B2B order management systems using ASP.NET Core and EF Core.\n• Designed RESTful APIs to integrate frontend and backend services.\n• Improved SQL Server performance by 30% through indexing and query optimization.\n• Implemented Redis and In-Memory caching strategies.\n• Built structured logging infrastructure using Serilog.\n• Developed global exception handling middleware.\n• Implemented JWT authentication and role-based authorization.\n• Built real-time notification infrastructure with SignalR.\n• Designed and managed API versioning strategy.\n• Integrated bank APIs and payment systems.\n• Worked within Agile/Scrum development teams.'
     },
     {
       id: '2',
@@ -38,63 +38,40 @@ const initialData: ResumeData = {
       position: '.NET Developer',
       startDate: '2020',
       endDate: '2022',
-      description: '• ASP.NET Core ve Web API kullanarak şirket içi otomasyon sistemleri geliştirdim.\n• Angular ile dinamik ve kullanıcı dostu arayüzler tasarladım.\n• SQL Server üzerinde veri modelleme ve sorgu optimizasyonu gerçekleştirdim.\n• Şirket içi iletişim, kalite kontrol ve sipariş yönetimi sistemleri geliştirdim.\n• İş süreçlerini dijitalleştirerek operasyonel verimliliği artırdım.'
+      description: '• Developed internal automation systems using ASP.NET Core and Web API.\n• Built dynamic frontend applications using Angular.\n• Designed database schemas and optimized SQL Server queries.'
     }
   ],
   education: [
     {
       id: '1',
-      school: 'İskenderun Teknik Üniversitesi',
-      degree: 'Bilgisayar Mühendisliği Lisans',
+      school: 'Iskenderun Technical University',
+      degree: 'Bachelor’s Degree in Computer Engineering',
       startDate: '2016',
       endDate: '2020',
       description: ''
     }
   ],
-  projects: [
-    {
-      id: '1',
-      name: 'B2B Sipariş ve Bayi Yönetim Sistemi',
-      link: '',
-      description: '• Bayi sipariş ve üretim süreçlerini yöneten uçtan uca sistem geliştirdim.\n• PayTR ve IPara ödeme sistemleri entegrasyonu gerçekleştirdim.\n• Rol bazlı yetkilendirme ve güvenli veri yönetimi sağladım.\n• Performans odaklı veri mimarisi tasarladım.',
-      technologies: ['ASP.NET Core 6', 'Web API', 'EF Core', 'SQL Server', 'React', 'SignalR']
-    },
-    {
-      id: '2',
-      name: 'Banka Ekstre ve Hesap Özet Sistemi',
-      link: '',
-      description: '• Banka API servisleri ile entegrasyon sağlayarak dinamik hesap takibi sistemi geliştirdim.\n• Kullanıcı rol yönetimi ve güvenli veri erişim mekanizması tasarladım.',
-      technologies: ['ASP.NET Core 8', 'Web API', 'Angular', 'SQL Server']
-    },
-    {
-      id: '3',
-      name: 'QR Kodlu Sipariş ve Yönetim Sistemi',
-      link: '',
-      description: '• Gerçek zamanlı sipariş yönetim sistemi geliştirdim.\n• QR kod entegrasyonu ile sipariş doğrulama ve takip altyapısı kurdum.\n• SignalR ile anlık bildirim ve mesajlaşma sistemi geliştirdim.',
-      technologies: ['ASP.NET Core', 'Angular', 'SignalR']
-    }
-  ],
+  projects: [], // User didn't provide specific projects in the list, but they are in experience
   skills: [
-    { category: 'Programlama Dilleri', items: ['C#', 'JavaScript'] },
-    { category: 'Backend', items: ['ASP.NET Core', '.NET Core', 'Web API', 'Entity Framework Core', 'LINQ'] },
-    { category: 'Frontend', items: ['React', 'Angular', 'Razor Pages', 'Bootstrap', 'HTML5', 'CSS3'] },
-    { category: 'Mimari & Prensipler', items: ['Clean Architecture', 'N-Tier Architecture', 'SOLID', 'Design Patterns', 'Dependency Injection'] },
-    { category: 'Veritabanı', items: ['SQL Server', 'PostgreSQL', 'MongoDB', 'MySQL'] },
-    { category: 'Caching & Performans', items: ['In-Memory Caching', 'Redis', 'SQL Index Optimization'] },
+    { category: 'Programming Languages', items: ['C#', 'JavaScript'] },
+    { category: 'Backend', items: ['ASP.NET Core', 'ASP.NET MVC', '.NET Core', 'Web API', 'Entity Framework Core', 'LINQ', 'WCF'] },
+    { category: 'Frontend', items: ['React', 'Angular', 'Razor Pages', 'HTML5', 'CSS3', 'Bootstrap', 'WPF'] },
+    { category: 'Architecture', items: ['Clean Architecture', 'N-Tier Architecture', 'SOLID Principles', 'Design Patterns', 'Dependency Injection'] },
+    { category: 'Databases', items: ['SQL Server', 'PostgreSQL', 'MongoDB', 'MySQL'] },
+    { category: 'Caching & Performance', items: ['Redis', 'In-Memory Caching', 'SQL Index Optimization', 'Query Performance Tuning'] },
     { category: 'Logging & Monitoring', items: ['Serilog', 'Structured Logging', 'Global Exception Handling'] },
     { category: 'Testing', items: ['Unit Testing (xUnit, NUnit)', 'Moq'] },
-    { category: 'Authentication & Security', items: ['JWT', 'Role-Based Authorization'] },
-    { category: 'Araçlar', items: ['Git', 'GitHub', 'Docker (Temel Seviye)', 'IIS', 'Postman'] },
-    { category: 'Diğer', items: ['RESTful API Development', 'API Versioning', 'Middleware Development'] }
+    { category: 'Security', items: ['JWT Authentication', 'Role-Based Authorization'] },
+    { category: 'Tools', items: ['Git', 'GitHub', 'Docker', 'IIS', 'Postman'] },
+    { category: 'Other', items: ['RESTful API Development', 'API Versioning', 'Middleware Development', 'Agile / Scrum'] }
   ],
   languages: [
-    { id: '1', name: 'İngilizce', level: 'B2 – Profesyonel Çalışma Düzeyi' },
-    { id: '2', name: 'Almanca', level: 'A1' }
+    { id: '1', name: 'English', level: 'B2' }
   ],
   references: [
     { 
       id: '1', 
-      name: 'Talep üzerine paylaşılacaktır.', 
+      name: 'Available upon request.', 
       company: '', 
       email: '', 
       phone: '' 
@@ -277,64 +254,64 @@ function App() {
             <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white shrink-0">
               CV
             </div>
-            Salih Yıldız CV Oluşturucu
+            Salih Yıldız CV Builder
           </div>
         </div>
         
         <nav className="flex-1 py-4 space-y-1">
-          {renderSidebarItem('personal', 'Kişisel Bilgiler', <User size={18} />)}
-          {renderSidebarItem('summary', 'Hakkımda', <FileText size={18} />)}
-          {renderSidebarItem('experience', 'Deneyim', <Briefcase size={18} />)}
-          {renderSidebarItem('education', 'Eğitim', <GraduationCap size={18} />)}
-          {renderSidebarItem('projects', 'Projeler', <Code size={18} />)}
-          {renderSidebarItem('skills', 'Yetenekler', <Wand2 size={18} />)}
-          {renderSidebarItem('languages', 'Yabancı Dil', <Languages size={18} />)}
-          {renderSidebarItem('references', 'Referanslar', <Users size={18} />)}
-          {renderSidebarItem('settings', 'Ayarlar', <Settings size={18} />)}
+          {renderSidebarItem('personal', 'Personal Info', <User size={18} />)}
+          {renderSidebarItem('summary', 'About Me', <FileText size={18} />)}
+          {renderSidebarItem('experience', 'Experience', <Briefcase size={18} />)}
+          {renderSidebarItem('education', 'Education', <GraduationCap size={18} />)}
+          {renderSidebarItem('projects', 'Projects', <Code size={18} />)}
+          {renderSidebarItem('skills', 'Skills', <Wand2 size={18} />)}
+          {renderSidebarItem('languages', 'Languages', <Languages size={18} />)}
+          {renderSidebarItem('references', 'References', <Users size={18} />)}
+          {renderSidebarItem('settings', 'Settings', <Settings size={18} />)}
         </nav>
 
         <div className="p-4 border-t bg-gray-50 space-y-3">
           <button 
             onClick={downloadPdf}
             className="w-full flex items-center justify-center gap-2 bg-gray-900 hover:bg-black text-white py-2.5 rounded-lg transition-all font-medium shadow-lg active:scale-95"
-            title="Yazdır penceresinden 'PDF Olarak Kaydet' seçeneğini kullanın"
+            title="Use 'Save as PDF' from the print dialog"
           >
             <Download size={18} />
-            PDF İndir (Yazdır)
+            Download PDF (Print)
           </button>
           <button 
             onClick={() => generateDocx(data)}
             className="w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white py-2.5 rounded-lg transition-all font-medium shadow-lg active:scale-95"
           >
             <FileText size={18} />
-            Word (DOCX) İndir
+            Download Word (DOCX)
           </button>
         </div>
       </div>
 
       {/* Editor Area */}
       <div className="w-96 bg-white border-r flex flex-col shrink-0 z-10 h-full overflow-hidden">
-         <div className="p-4 border-b bg-gray-50 flex justify-between items-center">
-           <h2 className="font-bold text-gray-700">Düzenle</h2>
-           {isGenerating && <span className="text-xs text-blue-600 animate-pulse flex items-center gap-1"><Wand2 size={12}/> AI Çalışıyor...</span>}
-         </div>
-         
-         <div className="flex-1 overflow-y-auto p-5 space-y-6 no-scrollbar pb-20">
-            
+          <div className="p-4 border-b bg-gray-50 flex justify-between items-center">
+            <h2 className="font-bold text-gray-700">Edit</h2>
+            {isGenerating && <span className="text-xs text-blue-600 animate-pulse flex items-center gap-1"><Wand2 size={12}/> AI Working...</span>}
+          </div>
+          
+          <div className="flex-1 overflow-y-auto p-5 space-y-6 no-scrollbar pb-20">
+             
             {activeTab === 'personal' && (
               <div className="space-y-4 animate-in fade-in slide-in-from-left-4 duration-300">
-                <InputGroup label="Ad Soyad" value={data.personalInfo.fullName} onChange={(v) => updatePersonalInfo('fullName', v)} />
-                <InputGroup label="Ünvan" value={data.personalInfo.title} onChange={(v) => updatePersonalInfo('title', v)} />
-                <InputGroup label="E-posta" value={data.personalInfo.email} onChange={(v) => updatePersonalInfo('email', v)} />
-                <InputGroup label="Telefon" value={data.personalInfo.phone} onChange={(v) => updatePersonalInfo('phone', v)} />
-                <InputGroup label="Konum" value={data.personalInfo.location} onChange={(v) => updatePersonalInfo('location', v)} />
-                <InputGroup label="Website" value={data.personalInfo.website} onChange={(v) => updatePersonalInfo('website', v)} placeholder="örn: ahmetyilmaz.dev" />
-                <InputGroup label="LinkedIn" value={data.personalInfo.linkedin} onChange={(v) => updatePersonalInfo('linkedin', v)} placeholder="örn: linkedin.com/in/ahmet" />
-                <InputGroup label="GitHub" value={data.personalInfo.github} onChange={(v) => updatePersonalInfo('github', v)} placeholder="örn: github.com/ahmet" />
+                <InputGroup label="Full Name" value={data.personalInfo.fullName} onChange={(v) => updatePersonalInfo('fullName', v)} />
+                <InputGroup label="Title" value={data.personalInfo.title} onChange={(v) => updatePersonalInfo('title', v)} />
+                <InputGroup label="Email" value={data.personalInfo.email} onChange={(v) => updatePersonalInfo('email', v)} />
+                <InputGroup label="Phone" value={data.personalInfo.phone} onChange={(v) => updatePersonalInfo('phone', v)} />
+                <InputGroup label="Location" value={data.personalInfo.location} onChange={(v) => updatePersonalInfo('location', v)} />
+                <InputGroup label="Website" value={data.personalInfo.website} onChange={(v) => updatePersonalInfo('website', v)} placeholder="e.g. salihyildiz.dev" />
+                <InputGroup label="LinkedIn" value={data.personalInfo.linkedin} onChange={(v) => updatePersonalInfo('linkedin', v)} placeholder="e.g. linkedin.com/in/salih" />
+                <InputGroup label="GitHub" value={data.personalInfo.github} onChange={(v) => updatePersonalInfo('github', v)} placeholder="e.g. github.com/salih" />
                 
                 {/* Photo Upload */}
                 <div>
-                  <label className="text-xs font-semibold text-gray-500 mb-1 block">Profil Fotoğrafı</label>
+                  <label className="text-xs font-semibold text-gray-500 mb-1 block">Profile Photo</label>
                   <div className="flex items-center gap-3 p-3 border rounded-lg bg-gray-50">
                     <div className="w-16 h-16 shrink-0 bg-gray-200 rounded-full overflow-hidden border-2 border-white shadow-sm flex items-center justify-center">
                       {data.personalInfo.photoUrl ? (
@@ -346,7 +323,7 @@ function App() {
                     <div className="flex-1">
                       <label className="cursor-pointer inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors w-full justify-center">
                         <Upload size={16} />
-                        Fotoğraf Seç
+                        Select Photo
                         <input type="file" accept="image/*" onChange={handlePhotoUpload} className="hidden" />
                       </label>
                       {data.personalInfo.photoUrl && (
@@ -354,7 +331,7 @@ function App() {
                            onClick={() => updatePersonalInfo('photoUrl', '')} 
                            className="mt-2 text-xs text-red-500 hover:text-red-700 flex items-center gap-1 mx-auto"
                          >
-                           <Trash2 size={12} /> Fotoğrafı Kaldır
+                           <Trash2 size={12} /> Remove Photo
                          </button>
                       )}
                     </div>
@@ -365,18 +342,18 @@ function App() {
 
             {activeTab === 'summary' && (
               <div className="space-y-4">
-                <label className="block text-sm font-medium text-gray-700">Özet Yazısı</label>
+                <label className="block text-sm font-medium text-gray-700">Summary</label>
                 <div className="relative">
                   <textarea 
                     className="w-full p-3 border rounded-lg h-48 text-sm focus:ring-2 focus:ring-blue-500 outline-none resize-none"
                     value={data.personalInfo.summary}
                     onChange={(e) => updatePersonalInfo('summary', e.target.value)}
-                    placeholder="Kendinizden kısaca bahsedin..."
+                    placeholder="Briefly describe yourself..."
                   ></textarea>
                   <button 
                     onClick={() => handleAiEnhance(data.personalInfo.summary, 'Professional CV Summary', (v) => updatePersonalInfo('summary', v))}
                     className="absolute bottom-3 right-3 p-1.5 bg-blue-100 text-blue-600 rounded-md hover:bg-blue-200 transition-colors"
-                    title="AI ile Geliştir"
+                    title="Enhance with AI"
                   >
                     <Wand2 size={16} />
                   </button>
@@ -392,14 +369,14 @@ function App() {
                       <Trash2 size={16} />
                     </button>
                     <div className="space-y-3">
-                      <InputGroup label="Şirket" value={exp.company} onChange={(v) => updateExperience(exp.id, 'company', v)} />
-                      <InputGroup label="Pozisyon" value={exp.position} onChange={(v) => updateExperience(exp.id, 'position', v)} />
+                      <InputGroup label="Company" value={exp.company} onChange={(v) => updateExperience(exp.id, 'company', v)} />
+                      <InputGroup label="Position" value={exp.position} onChange={(v) => updateExperience(exp.id, 'position', v)} />
                       <div className="flex gap-2">
-                         <InputGroup label="Başlangıç" value={exp.startDate} onChange={(v) => updateExperience(exp.id, 'startDate', v)} placeholder="2020-01" />
-                         <InputGroup label="Bitiş" value={exp.endDate} onChange={(v) => updateExperience(exp.id, 'endDate', v)} placeholder="Devam" />
+                         <InputGroup label="Start" value={exp.startDate} onChange={(v) => updateExperience(exp.id, 'startDate', v)} placeholder="2020-01" />
+                         <InputGroup label="End" value={exp.endDate} onChange={(v) => updateExperience(exp.id, 'endDate', v)} placeholder="Present" />
                       </div>
                       <div className="relative">
-                         <label className="text-xs font-semibold text-gray-500 mb-1 block">Açıklama</label>
+                         <label className="text-xs font-semibold text-gray-500 mb-1 block">Description</label>
                          <textarea 
                            className="w-full p-2 border rounded text-sm h-24 focus:ring-2 focus:ring-blue-500 outline-none"
                            value={exp.description}
@@ -416,7 +393,7 @@ function App() {
                   </div>
                 ))}
                 <button onClick={addExperience} className="w-full py-2 border-2 border-dashed border-gray-300 rounded-lg text-gray-500 hover:border-blue-500 hover:text-blue-500 transition-colors flex items-center justify-center gap-2">
-                  <Plus size={16} /> Deneyim Ekle
+                  <Plus size={16} /> Add Experience
                 </button>
               </div>
             )}
@@ -429,17 +406,17 @@ function App() {
                       <Trash2 size={16} />
                     </button>
                     <div className="space-y-3">
-                      <InputGroup label="Okul" value={edu.school} onChange={(v) => updateEducation(edu.id, 'school', v)} />
-                      <InputGroup label="Bölüm/Derece" value={edu.degree} onChange={(v) => updateEducation(edu.id, 'degree', v)} />
+                      <InputGroup label="School" value={edu.school} onChange={(v) => updateEducation(edu.id, 'school', v)} />
+                      <InputGroup label="Degree" value={edu.degree} onChange={(v) => updateEducation(edu.id, 'degree', v)} />
                       <div className="flex gap-2">
-                         <InputGroup label="Başlangıç" value={edu.startDate} onChange={(v) => updateEducation(edu.id, 'startDate', v)} />
-                         <InputGroup label="Bitiş" value={edu.endDate} onChange={(v) => updateEducation(edu.id, 'endDate', v)} />
+                         <InputGroup label="Start" value={edu.startDate} onChange={(v) => updateEducation(edu.id, 'startDate', v)} />
+                         <InputGroup label="End" value={edu.endDate} onChange={(v) => updateEducation(edu.id, 'endDate', v)} />
                       </div>
                     </div>
                   </div>
                 ))}
                 <button onClick={addEducation} className="w-full py-2 border-2 border-dashed border-gray-300 rounded-lg text-gray-500 hover:border-blue-500 hover:text-blue-500 transition-colors flex items-center justify-center gap-2">
-                  <Plus size={16} /> Eğitim Ekle
+                  <Plus size={16} /> Add Education
                 </button>
               </div>
             )}
@@ -452,10 +429,10 @@ function App() {
                       <Trash2 size={16} />
                     </button>
                     <div className="space-y-3">
-                      <InputGroup label="Proje Adı" value={proj.name} onChange={(v) => updateProject(proj.id, 'name', v)} />
+                      <InputGroup label="Project Name" value={proj.name} onChange={(v) => updateProject(proj.id, 'name', v)} />
                       <InputGroup label="Link" value={proj.link} onChange={(v) => updateProject(proj.id, 'link', v)} placeholder="https://..." />
                       <div className="relative">
-                         <label className="text-xs font-semibold text-gray-500 mb-1 block">Açıklama</label>
+                         <label className="text-xs font-semibold text-gray-500 mb-1 block">Description</label>
                          <textarea 
                            className="w-full p-2 border rounded text-sm h-20 focus:ring-2 focus:ring-blue-500 outline-none"
                            value={proj.description}
@@ -469,7 +446,7 @@ function App() {
                           </button>
                       </div>
                       <div>
-                        <label className="text-xs font-semibold text-gray-500 mb-1 block">Teknolojiler (Virgülle ayırın)</label>
+                        <label className="text-xs font-semibold text-gray-500 mb-1 block">Technologies (Comma separated)</label>
                         <input 
                           type="text" 
                           className="w-full p-2 border rounded text-sm focus:ring-2 focus:ring-blue-500 outline-none"
@@ -482,7 +459,7 @@ function App() {
                   </div>
                 ))}
                 <button onClick={addProject} className="w-full py-2 border-2 border-dashed border-gray-300 rounded-lg text-gray-500 hover:border-blue-500 hover:text-blue-500 transition-colors flex items-center justify-center gap-2">
-                  <Plus size={16} /> Proje Ekle
+                  <Plus size={16} /> Add Project
                 </button>
               </div>
             )}
@@ -495,9 +472,9 @@ function App() {
                       <Trash2 size={16} />
                     </button>
                     <div className="space-y-3">
-                      <InputGroup label="Kategori" value={group.category} onChange={(v) => updateSkillCategory(idx, v)} placeholder="örn: Frontend" />
+                      <InputGroup label="Category" value={group.category} onChange={(v) => updateSkillCategory(idx, v)} placeholder="e.g. Frontend" />
                       <div>
-                        <label className="text-xs font-semibold text-gray-500 mb-1 block">Yetenekler (Virgülle ayırın)</label>
+                        <label className="text-xs font-semibold text-gray-500 mb-1 block">Skills (Comma separated)</label>
                         <textarea 
                           className="w-full p-2 border rounded text-sm h-20 focus:ring-2 focus:ring-blue-500 outline-none"
                           value={group.items.join(', ')}
@@ -509,7 +486,7 @@ function App() {
                   </div>
                 ))}
                 <button onClick={addSkillCategory} className="w-full py-2 border-2 border-dashed border-gray-300 rounded-lg text-gray-500 hover:border-blue-500 hover:text-blue-500 transition-colors flex items-center justify-center gap-2">
-                  <Plus size={16} /> Kategori Ekle
+                  <Plus size={16} /> Add Category
                 </button>
               </div>
             )}
@@ -522,8 +499,8 @@ function App() {
                      <Trash2 size={16} />
                    </button>
                    <div className="space-y-3">
-                     <InputGroup label="Dil" value={lang.name} onChange={(v) => updateLanguage(lang.id, 'name', v)} placeholder="örn: İngilizce" />
-                     <InputGroup label="Seviye" value={lang.level} onChange={(v) => updateLanguage(lang.id, 'level', v)} placeholder="örn: C1 (Advanced)" />
+                     <InputGroup label="Language" value={lang.name} onChange={(v) => updateLanguage(lang.id, 'name', v)} placeholder="e.g. English" />
+                     <InputGroup label="Level" value={lang.level} onChange={(v) => updateLanguage(lang.id, 'level', v)} placeholder="e.g. C1 (Advanced)" />
                    </div>
                  </div>
                 ))}
@@ -531,7 +508,7 @@ function App() {
                   onClick={addLanguage} 
                   className="w-full py-2 border-2 border-dashed border-gray-300 rounded-lg text-gray-500 hover:border-blue-500 hover:text-blue-500 transition-colors flex items-center justify-center gap-2"
                 >
-                  <Plus size={16} /> Dil Ekle
+                  <Plus size={16} /> Add Language
                 </button>
               </div>
             )}
@@ -544,10 +521,10 @@ function App() {
                      <Trash2 size={16} />
                    </button>
                    <div className="space-y-3">
-                     <InputGroup label="Ad Soyad" value={ref.name} onChange={(v) => setData(prev => ({...prev, references: prev.references.map(r => r.id === ref.id ? {...r, name: v} : r)}))} />
-                     <InputGroup label="Şirket / Pozisyon" value={ref.company} onChange={(v) => setData(prev => ({...prev, references: prev.references.map(r => r.id === ref.id ? {...r, company: v} : r)}))} />
-                     <InputGroup label="E-posta" value={ref.email} onChange={(v) => setData(prev => ({...prev, references: prev.references.map(r => r.id === ref.id ? {...r, email: v} : r)}))} />
-                     <InputGroup label="Telefon" value={ref.phone} onChange={(v) => setData(prev => ({...prev, references: prev.references.map(r => r.id === ref.id ? {...r, phone: v} : r)}))} />
+                     <InputGroup label="Full Name" value={ref.name} onChange={(v) => setData(prev => ({...prev, references: prev.references.map(r => r.id === ref.id ? {...r, name: v} : r)}))} />
+                     <InputGroup label="Company / Position" value={ref.company} onChange={(v) => setData(prev => ({...prev, references: prev.references.map(r => r.id === ref.id ? {...r, company: v} : r)}))} />
+                     <InputGroup label="Email" value={ref.email} onChange={(v) => setData(prev => ({...prev, references: prev.references.map(r => r.id === ref.id ? {...r, email: v} : r)}))} />
+                     <InputGroup label="Phone" value={ref.phone} onChange={(v) => setData(prev => ({...prev, references: prev.references.map(r => r.id === ref.id ? {...r, phone: v} : r)}))} />
                    </div>
                  </div>
                 ))}
@@ -555,7 +532,7 @@ function App() {
                   onClick={() => setData(prev => ({...prev, references: [...prev.references, {id: Date.now().toString(), name: '', company: '', email: '', phone: ''}]}))} 
                   className="w-full py-2 border-2 border-dashed border-gray-300 rounded-lg text-gray-500 hover:border-blue-500 hover:text-blue-500 transition-colors flex items-center justify-center gap-2"
                 >
-                  <Plus size={16} /> Referans Ekle
+                  <Plus size={16} /> Add Reference
                 </button>
               </div>
             )}
@@ -563,7 +540,7 @@ function App() {
             {activeTab === 'settings' && (
               <div className="space-y-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Tema Rengi</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Theme Color</label>
                   <div className="flex flex-wrap gap-3">
                     {['#2c3e50', '#1a365d', '#115e59', '#881337', '#334155', '#4c1d95', '#000000'].map(color => (
                       <button
