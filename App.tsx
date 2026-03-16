@@ -16,12 +16,12 @@ const initialData: ResumeData = {
     title: 'Senior .NET Backend Developer | ASP.NET Core | ASP.NET MVC | Web API | Clean Architecture',
     email: 'yldzsalih27@gmail.com',
     phone: '0543 282 3301',
-    location: 'Gaziantep, Turkey',
+    location: 'Gaziantep, Türkei',
     website: 'https://salihyildiz.runasp.net',
     linkedin: 'https://linkedin.com/in/salih-yildiz-bab4b1181/',
     github: 'https://github.com/salihyildiz08',
     photoUrl: 'https://picsum.photos/200', // Placeholder
-    summary: ".NET developer with 5+ years of experience building scalable and high-performance backend systems using ASP.NET Core, ASP.NET MVC and Web API.\n\nExperienced in designing maintainable and scalable architectures following Clean Architecture and SOLID principles. Strong background in RESTful API development, Entity Framework Core, SQL Server performance optimization, Redis caching, structured logging with Serilog, and JWT-based authentication.\n\nHands-on experience with payment system integrations, real-time applications using SignalR, and Agile/Scrum development environments.",
+    summary: ".NET-Entwickler mit über 5 Jahren Erfahrung im Aufbau skalierbarer und hochperformanter Backend-Systeme mit ASP.NET Core, ASP.NET MVC und Web API.\n\nErfahren im Entwurf wartbarer und skalierbarer Architekturen nach Clean Architecture und SOLID-Prinzipien. Fundierte Kenntnisse in der RESTful API-Entwicklung, Entity Framework Core, SQL Server Performance-Optimierung, Redis-Caching, strukturierter Protokollierung mit Serilog und JWT-basierter Authentifizierung.\n\nPraktische Erfahrung mit Zahlungssystem-Integrationen, Echtzeitanwendungen mit SignalR und Agile/Scrum-Entwicklungsumgebungen.",
   },
   experience: [
     {
@@ -29,8 +29,8 @@ const initialData: ResumeData = {
       company: 'Dilek Halı A.Ş.',
       position: 'Senior .NET Developer',
       startDate: '2022',
-      endDate: 'Present',
-      description: '• Developed enterprise-level B2B order management systems using ASP.NET Core and EF Core.\n• Designed RESTful APIs to integrate frontend and backend services.\n• Improved SQL Server performance by 30% through indexing and query optimization.\n• Implemented Redis and In-Memory caching strategies.\n• Built structured logging infrastructure using Serilog.\n• Developed global exception handling middleware.\n• Implemented JWT authentication and role-based authorization.\n• Built real-time notification infrastructure with SignalR.\n• Designed and managed API versioning strategy.\n• Integrated bank APIs and payment systems.\n• Worked within Agile/Scrum development teams.'
+      endDate: 'Heute',
+      description: '• Entwicklung von B2B-Auftragsverwaltungssystemen auf Unternehmensebene mit ASP.NET Core und EF Core.\n• Entwurf von RESTful APIs zur Integration von Frontend- und Backend-Services.\n• Verbesserung der SQL Server-Performance um 30% durch Indizierung und Abfrageoptimierung.\n• Implementierung von Redis- und In-Memory-Caching-Strategien.\n• Aufbau einer strukturierten Logging-Infrastruktur mit Serilog.\n• Entwicklung von Middleware für globales Exception-Handling.\n• Implementierung von JWT-Authentifizierung und rollenbasierter Autorisierung.\n• Aufbau einer Echtzeit-Benachrichtigungsinfrastruktur mit SignalR.\n• Entwurf und Verwaltung der API-Versionierungsstrategie.\n• Integration von Bank-APIs und Zahlungssystemen.\n• Arbeit in Agile/Scrum-Entwicklungsteams.'
     },
     {
       id: '2',
@@ -38,14 +38,14 @@ const initialData: ResumeData = {
       position: '.NET Developer',
       startDate: '2020',
       endDate: '2022',
-      description: '• Developed internal automation systems using ASP.NET Core and Web API.\n• Built dynamic frontend applications using Angular.\n• Designed database schemas and optimized SQL Server queries.'
+      description: '• Entwicklung interner Automatisierungssysteme mit ASP.NET Core und Web API.\n• Aufbau dynamischer Frontend-Anwendungen mit Angular.\n• Entwurf von Datenbank-Schemas und Optimierung von SQL Server-Abfragen.'
     }
   ],
   education: [
     {
       id: '1',
-      school: 'Iskenderun Technical University',
-      degree: 'Bachelor’s Degree in Computer Engineering',
+      school: 'Technische Universität Iskenderun',
+      degree: 'Bachelor in Informatik (Computer Engineering)',
       startDate: '2016',
       endDate: '2020',
       description: ''
@@ -53,25 +53,25 @@ const initialData: ResumeData = {
   ],
   projects: [], // User didn't provide specific projects in the list, but they are in experience
   skills: [
-    { category: 'Programming Languages', items: ['C#', 'JavaScript'] },
+    { category: 'Programmiersprachen', items: ['C#', 'JavaScript'] },
     { category: 'Backend', items: ['ASP.NET Core', 'ASP.NET MVC', '.NET Core', 'Web API', 'Entity Framework Core', 'LINQ', 'WCF'] },
     { category: 'Frontend', items: ['React', 'Angular', 'Razor Pages', 'HTML5', 'CSS3', 'Bootstrap', 'WPF'] },
-    { category: 'Architecture', items: ['Clean Architecture', 'N-Tier Architecture', 'SOLID Principles', 'Design Patterns', 'Dependency Injection'] },
-    { category: 'Databases', items: ['SQL Server', 'PostgreSQL', 'MongoDB', 'MySQL'] },
+    { category: 'Architektur', items: ['Clean Architecture', 'N-Tier Architecture', 'SOLID Principles', 'Design Patterns', 'Dependency Injection'] },
+    { category: 'Datenbanken', items: ['SQL Server', 'PostgreSQL', 'MongoDB', 'MySQL'] },
     { category: 'Caching & Performance', items: ['Redis', 'In-Memory Caching', 'SQL Index Optimization', 'Query Performance Tuning'] },
     { category: 'Logging & Monitoring', items: ['Serilog', 'Structured Logging', 'Global Exception Handling'] },
     { category: 'Testing', items: ['Unit Testing (xUnit, NUnit)', 'Moq'] },
-    { category: 'Security', items: ['JWT Authentication', 'Role-Based Authorization'] },
+    { category: 'Sicherheit', items: ['JWT Authentication', 'Role-Based Authorization'] },
     { category: 'Tools', items: ['Git', 'GitHub', 'Docker', 'IIS', 'Postman'] },
-    { category: 'Other', items: ['RESTful API Development', 'API Versioning', 'Middleware Development', 'Agile / Scrum'] }
+    { category: 'Sonstiges', items: ['RESTful API Development', 'API Versioning', 'Middleware Development', 'Agile / Scrum'] }
   ],
   languages: [
-    { id: '1', name: 'English', level: 'B2' }
+    { id: '1', name: 'Englisch', level: 'B2' }
   ],
   references: [
     { 
       id: '1', 
-      name: 'Available upon request.', 
+      name: 'Auf Anfrage erhältlich.', 
       company: '', 
       email: '', 
       phone: '' 
@@ -259,15 +259,15 @@ function App() {
         </div>
         
         <nav className="flex-1 py-4 space-y-1">
-          {renderSidebarItem('personal', 'Personal Info', <User size={18} />)}
-          {renderSidebarItem('summary', 'About Me', <FileText size={18} />)}
-          {renderSidebarItem('experience', 'Experience', <Briefcase size={18} />)}
-          {renderSidebarItem('education', 'Education', <GraduationCap size={18} />)}
-          {renderSidebarItem('projects', 'Projects', <Code size={18} />)}
-          {renderSidebarItem('skills', 'Skills', <Wand2 size={18} />)}
-          {renderSidebarItem('languages', 'Languages', <Languages size={18} />)}
-          {renderSidebarItem('references', 'References', <Users size={18} />)}
-          {renderSidebarItem('settings', 'Settings', <Settings size={18} />)}
+          {renderSidebarItem('personal', 'Persönliche Infos', <User size={18} />)}
+          {renderSidebarItem('summary', 'Über mich', <FileText size={18} />)}
+          {renderSidebarItem('experience', 'Berufserfahrung', <Briefcase size={18} />)}
+          {renderSidebarItem('education', 'Ausbildung', <GraduationCap size={18} />)}
+          {renderSidebarItem('projects', 'Projekte', <Code size={18} />)}
+          {renderSidebarItem('skills', 'Kenntnisse', <Wand2 size={18} />)}
+          {renderSidebarItem('languages', 'Sprachen', <Languages size={18} />)}
+          {renderSidebarItem('references', 'Referenzen', <Users size={18} />)}
+          {renderSidebarItem('settings', 'Einstellungen', <Settings size={18} />)}
         </nav>
 
         <div className="p-4 border-t bg-gray-50 space-y-3">
@@ -277,7 +277,7 @@ function App() {
             title="Use 'Save as PDF' from the print dialog"
           >
             <Download size={18} />
-            Download PDF (Print)
+            Download PDF (Drucken)
           </button>
           <button 
             onClick={() => generateDocx(data)}
@@ -292,26 +292,26 @@ function App() {
       {/* Editor Area */}
       <div className="w-96 bg-white border-r flex flex-col shrink-0 z-10 h-full overflow-hidden">
           <div className="p-4 border-b bg-gray-50 flex justify-between items-center">
-            <h2 className="font-bold text-gray-700">Edit</h2>
-            {isGenerating && <span className="text-xs text-blue-600 animate-pulse flex items-center gap-1"><Wand2 size={12}/> AI Working...</span>}
+            <h2 className="font-bold text-gray-700">Bearbeiten</h2>
+            {isGenerating && <span className="text-xs text-blue-600 animate-pulse flex items-center gap-1"><Wand2 size={12}/> KI arbeitet...</span>}
           </div>
           
           <div className="flex-1 overflow-y-auto p-5 space-y-6 no-scrollbar pb-20">
              
             {activeTab === 'personal' && (
               <div className="space-y-4 animate-in fade-in slide-in-from-left-4 duration-300">
-                <InputGroup label="Full Name" value={data.personalInfo.fullName} onChange={(v) => updatePersonalInfo('fullName', v)} />
-                <InputGroup label="Title" value={data.personalInfo.title} onChange={(v) => updatePersonalInfo('title', v)} />
-                <InputGroup label="Email" value={data.personalInfo.email} onChange={(v) => updatePersonalInfo('email', v)} />
-                <InputGroup label="Phone" value={data.personalInfo.phone} onChange={(v) => updatePersonalInfo('phone', v)} />
-                <InputGroup label="Location" value={data.personalInfo.location} onChange={(v) => updatePersonalInfo('location', v)} />
-                <InputGroup label="Website" value={data.personalInfo.website} onChange={(v) => updatePersonalInfo('website', v)} placeholder="e.g. salihyildiz.dev" />
-                <InputGroup label="LinkedIn" value={data.personalInfo.linkedin} onChange={(v) => updatePersonalInfo('linkedin', v)} placeholder="e.g. linkedin.com/in/salih" />
-                <InputGroup label="GitHub" value={data.personalInfo.github} onChange={(v) => updatePersonalInfo('github', v)} placeholder="e.g. github.com/salih" />
+                <InputGroup label="Vollständiger Name" value={data.personalInfo.fullName} onChange={(v) => updatePersonalInfo('fullName', v)} />
+                <InputGroup label="Titel" value={data.personalInfo.title} onChange={(v) => updatePersonalInfo('title', v)} />
+                <InputGroup label="E-Mail" value={data.personalInfo.email} onChange={(v) => updatePersonalInfo('email', v)} />
+                <InputGroup label="Telefon" value={data.personalInfo.phone} onChange={(v) => updatePersonalInfo('phone', v)} />
+                <InputGroup label="Standort" value={data.personalInfo.location} onChange={(v) => updatePersonalInfo('location', v)} />
+                <InputGroup label="Webseite" value={data.personalInfo.website} onChange={(v) => updatePersonalInfo('website', v)} placeholder="z.B. salihyildiz.dev" />
+                <InputGroup label="LinkedIn" value={data.personalInfo.linkedin} onChange={(v) => updatePersonalInfo('linkedin', v)} placeholder="z.B. linkedin.com/in/salih" />
+                <InputGroup label="GitHub" value={data.personalInfo.github} onChange={(v) => updatePersonalInfo('github', v)} placeholder="z.B. github.com/salih" />
                 
                 {/* Photo Upload */}
                 <div>
-                  <label className="text-xs font-semibold text-gray-500 mb-1 block">Profile Photo</label>
+                  <label className="text-xs font-semibold text-gray-500 mb-1 block">Profilfoto</label>
                   <div className="flex items-center gap-3 p-3 border rounded-lg bg-gray-50">
                     <div className="w-16 h-16 shrink-0 bg-gray-200 rounded-full overflow-hidden border-2 border-white shadow-sm flex items-center justify-center">
                       {data.personalInfo.photoUrl ? (
@@ -323,7 +323,7 @@ function App() {
                     <div className="flex-1">
                       <label className="cursor-pointer inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors w-full justify-center">
                         <Upload size={16} />
-                        Select Photo
+                        Foto auswählen
                         <input type="file" accept="image/*" onChange={handlePhotoUpload} className="hidden" />
                       </label>
                       {data.personalInfo.photoUrl && (
@@ -331,7 +331,7 @@ function App() {
                            onClick={() => updatePersonalInfo('photoUrl', '')} 
                            className="mt-2 text-xs text-red-500 hover:text-red-700 flex items-center gap-1 mx-auto"
                          >
-                           <Trash2 size={12} /> Remove Photo
+                           <Trash2 size={12} /> Foto entfernen
                          </button>
                       )}
                     </div>
@@ -342,18 +342,18 @@ function App() {
 
             {activeTab === 'summary' && (
               <div className="space-y-4">
-                <label className="block text-sm font-medium text-gray-700">Summary</label>
+                <label className="block text-sm font-medium text-gray-700">Zusammenfassung</label>
                 <div className="relative">
                   <textarea 
                     className="w-full p-3 border rounded-lg h-48 text-sm focus:ring-2 focus:ring-blue-500 outline-none resize-none"
                     value={data.personalInfo.summary}
                     onChange={(e) => updatePersonalInfo('summary', e.target.value)}
-                    placeholder="Briefly describe yourself..."
+                    placeholder="Beschreiben Sie sich kurz..."
                   ></textarea>
                   <button 
                     onClick={() => handleAiEnhance(data.personalInfo.summary, 'Professional CV Summary', (v) => updatePersonalInfo('summary', v))}
                     className="absolute bottom-3 right-3 p-1.5 bg-blue-100 text-blue-600 rounded-md hover:bg-blue-200 transition-colors"
-                    title="Enhance with AI"
+                    title="Mit KI verbessern"
                   >
                     <Wand2 size={16} />
                   </button>
@@ -369,14 +369,14 @@ function App() {
                       <Trash2 size={16} />
                     </button>
                     <div className="space-y-3">
-                      <InputGroup label="Company" value={exp.company} onChange={(v) => updateExperience(exp.id, 'company', v)} />
+                      <InputGroup label="Unternehmen" value={exp.company} onChange={(v) => updateExperience(exp.id, 'company', v)} />
                       <InputGroup label="Position" value={exp.position} onChange={(v) => updateExperience(exp.id, 'position', v)} />
                       <div className="flex gap-2">
-                         <InputGroup label="Start" value={exp.startDate} onChange={(v) => updateExperience(exp.id, 'startDate', v)} placeholder="2020-01" />
-                         <InputGroup label="End" value={exp.endDate} onChange={(v) => updateExperience(exp.id, 'endDate', v)} placeholder="Present" />
+                         <InputGroup label="Beginn" value={exp.startDate} onChange={(v) => updateExperience(exp.id, 'startDate', v)} placeholder="2020-01" />
+                         <InputGroup label="Ende" value={exp.endDate} onChange={(v) => updateExperience(exp.id, 'endDate', v)} placeholder="Heute" />
                       </div>
                       <div className="relative">
-                         <label className="text-xs font-semibold text-gray-500 mb-1 block">Description</label>
+                         <label className="text-xs font-semibold text-gray-500 mb-1 block">Beschreibung</label>
                          <textarea 
                            className="w-full p-2 border rounded text-sm h-24 focus:ring-2 focus:ring-blue-500 outline-none"
                            value={exp.description}
@@ -393,7 +393,7 @@ function App() {
                   </div>
                 ))}
                 <button onClick={addExperience} className="w-full py-2 border-2 border-dashed border-gray-300 rounded-lg text-gray-500 hover:border-blue-500 hover:text-blue-500 transition-colors flex items-center justify-center gap-2">
-                  <Plus size={16} /> Add Experience
+                  <Plus size={16} /> Erfahrung hinzufügen
                 </button>
               </div>
             )}
@@ -406,17 +406,17 @@ function App() {
                       <Trash2 size={16} />
                     </button>
                     <div className="space-y-3">
-                      <InputGroup label="School" value={edu.school} onChange={(v) => updateEducation(edu.id, 'school', v)} />
-                      <InputGroup label="Degree" value={edu.degree} onChange={(v) => updateEducation(edu.id, 'degree', v)} />
+                      <InputGroup label="Schule/Universität" value={edu.school} onChange={(v) => updateEducation(edu.id, 'school', v)} />
+                      <InputGroup label="Abschluss" value={edu.degree} onChange={(v) => updateEducation(edu.id, 'degree', v)} />
                       <div className="flex gap-2">
-                         <InputGroup label="Start" value={edu.startDate} onChange={(v) => updateEducation(edu.id, 'startDate', v)} />
-                         <InputGroup label="End" value={edu.endDate} onChange={(v) => updateEducation(edu.id, 'endDate', v)} />
+                         <InputGroup label="Beginn" value={edu.startDate} onChange={(v) => updateEducation(edu.id, 'startDate', v)} />
+                         <InputGroup label="Ende" value={edu.endDate} onChange={(v) => updateEducation(edu.id, 'endDate', v)} />
                       </div>
                     </div>
                   </div>
                 ))}
                 <button onClick={addEducation} className="w-full py-2 border-2 border-dashed border-gray-300 rounded-lg text-gray-500 hover:border-blue-500 hover:text-blue-500 transition-colors flex items-center justify-center gap-2">
-                  <Plus size={16} /> Add Education
+                  <Plus size={16} /> Ausbildung hinzufügen
                 </button>
               </div>
             )}
@@ -429,10 +429,10 @@ function App() {
                       <Trash2 size={16} />
                     </button>
                     <div className="space-y-3">
-                      <InputGroup label="Project Name" value={proj.name} onChange={(v) => updateProject(proj.id, 'name', v)} />
+                      <InputGroup label="Projektname" value={proj.name} onChange={(v) => updateProject(proj.id, 'name', v)} />
                       <InputGroup label="Link" value={proj.link} onChange={(v) => updateProject(proj.id, 'link', v)} placeholder="https://..." />
                       <div className="relative">
-                         <label className="text-xs font-semibold text-gray-500 mb-1 block">Description</label>
+                         <label className="text-xs font-semibold text-gray-500 mb-1 block">Beschreibung</label>
                          <textarea 
                            className="w-full p-2 border rounded text-sm h-20 focus:ring-2 focus:ring-blue-500 outline-none"
                            value={proj.description}
@@ -446,7 +446,7 @@ function App() {
                           </button>
                       </div>
                       <div>
-                        <label className="text-xs font-semibold text-gray-500 mb-1 block">Technologies (Comma separated)</label>
+                        <label className="text-xs font-semibold text-gray-500 mb-1 block">Technologien (Kommagetrennt)</label>
                         <input 
                           type="text" 
                           className="w-full p-2 border rounded text-sm focus:ring-2 focus:ring-blue-500 outline-none"
@@ -459,7 +459,7 @@ function App() {
                   </div>
                 ))}
                 <button onClick={addProject} className="w-full py-2 border-2 border-dashed border-gray-300 rounded-lg text-gray-500 hover:border-blue-500 hover:text-blue-500 transition-colors flex items-center justify-center gap-2">
-                  <Plus size={16} /> Add Project
+                  <Plus size={16} /> Projekt hinzufügen
                 </button>
               </div>
             )}
@@ -472,9 +472,9 @@ function App() {
                       <Trash2 size={16} />
                     </button>
                     <div className="space-y-3">
-                      <InputGroup label="Category" value={group.category} onChange={(v) => updateSkillCategory(idx, v)} placeholder="e.g. Frontend" />
+                      <InputGroup label="Kategorie" value={group.category} onChange={(v) => updateSkillCategory(idx, v)} placeholder="z.B. Frontend" />
                       <div>
-                        <label className="text-xs font-semibold text-gray-500 mb-1 block">Skills (Comma separated)</label>
+                        <label className="text-xs font-semibold text-gray-500 mb-1 block">Kenntnisse (Kommagetrennt)</label>
                         <textarea 
                           className="w-full p-2 border rounded text-sm h-20 focus:ring-2 focus:ring-blue-500 outline-none"
                           value={group.items.join(', ')}
@@ -486,7 +486,7 @@ function App() {
                   </div>
                 ))}
                 <button onClick={addSkillCategory} className="w-full py-2 border-2 border-dashed border-gray-300 rounded-lg text-gray-500 hover:border-blue-500 hover:text-blue-500 transition-colors flex items-center justify-center gap-2">
-                  <Plus size={16} /> Add Category
+                  <Plus size={16} /> Kategorie hinzufügen
                 </button>
               </div>
             )}
@@ -499,8 +499,8 @@ function App() {
                      <Trash2 size={16} />
                    </button>
                    <div className="space-y-3">
-                     <InputGroup label="Language" value={lang.name} onChange={(v) => updateLanguage(lang.id, 'name', v)} placeholder="e.g. English" />
-                     <InputGroup label="Level" value={lang.level} onChange={(v) => updateLanguage(lang.id, 'level', v)} placeholder="e.g. C1 (Advanced)" />
+                     <InputGroup label="Sprache" value={lang.name} onChange={(v) => updateLanguage(lang.id, 'name', v)} placeholder="z.B. Englisch" />
+                     <InputGroup label="Niveau" value={lang.level} onChange={(v) => updateLanguage(lang.id, 'level', v)} placeholder="z.B. C1 (Fortgeschritten)" />
                    </div>
                  </div>
                 ))}
@@ -508,7 +508,7 @@ function App() {
                   onClick={addLanguage} 
                   className="w-full py-2 border-2 border-dashed border-gray-300 rounded-lg text-gray-500 hover:border-blue-500 hover:text-blue-500 transition-colors flex items-center justify-center gap-2"
                 >
-                  <Plus size={16} /> Add Language
+                  <Plus size={16} /> Sprache hinzufügen
                 </button>
               </div>
             )}
@@ -521,10 +521,10 @@ function App() {
                      <Trash2 size={16} />
                    </button>
                    <div className="space-y-3">
-                     <InputGroup label="Full Name" value={ref.name} onChange={(v) => setData(prev => ({...prev, references: prev.references.map(r => r.id === ref.id ? {...r, name: v} : r)}))} />
-                     <InputGroup label="Company / Position" value={ref.company} onChange={(v) => setData(prev => ({...prev, references: prev.references.map(r => r.id === ref.id ? {...r, company: v} : r)}))} />
-                     <InputGroup label="Email" value={ref.email} onChange={(v) => setData(prev => ({...prev, references: prev.references.map(r => r.id === ref.id ? {...r, email: v} : r)}))} />
-                     <InputGroup label="Phone" value={ref.phone} onChange={(v) => setData(prev => ({...prev, references: prev.references.map(r => r.id === ref.id ? {...r, phone: v} : r)}))} />
+                     <InputGroup label="Vollständiger Name" value={ref.name} onChange={(v) => setData(prev => ({...prev, references: prev.references.map(r => r.id === ref.id ? {...r, name: v} : r)}))} />
+                     <InputGroup label="Unternehmen / Position" value={ref.company} onChange={(v) => setData(prev => ({...prev, references: prev.references.map(r => r.id === ref.id ? {...r, company: v} : r)}))} />
+                     <InputGroup label="E-Mail" value={ref.email} onChange={(v) => setData(prev => ({...prev, references: prev.references.map(r => r.id === ref.id ? {...r, email: v} : r)}))} />
+                     <InputGroup label="Telefon" value={ref.phone} onChange={(v) => setData(prev => ({...prev, references: prev.references.map(r => r.id === ref.id ? {...r, phone: v} : r)}))} />
                    </div>
                  </div>
                 ))}
@@ -532,7 +532,7 @@ function App() {
                   onClick={() => setData(prev => ({...prev, references: [...prev.references, {id: Date.now().toString(), name: '', company: '', email: '', phone: ''}]}))} 
                   className="w-full py-2 border-2 border-dashed border-gray-300 rounded-lg text-gray-500 hover:border-blue-500 hover:text-blue-500 transition-colors flex items-center justify-center gap-2"
                 >
-                  <Plus size={16} /> Add Reference
+                  <Plus size={16} /> Referenz hinzufügen
                 </button>
               </div>
             )}
@@ -540,7 +540,7 @@ function App() {
             {activeTab === 'settings' && (
               <div className="space-y-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Theme Color</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Themenfarbe</label>
                   <div className="flex flex-wrap gap-3">
                     {['#2c3e50', '#1a365d', '#115e59', '#881337', '#334155', '#4c1d95', '#000000'].map(color => (
                       <button
