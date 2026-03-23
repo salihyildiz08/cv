@@ -255,6 +255,15 @@ export const generateDocx = (data: ResumeData) => {
             new Paragraph({ text: "", spacing: { after: 150 } }),
           ] : []),
 
+          // --- DRIVING LICENSE ---
+          ...(personalInfo.drivingLicense ? [
+            createSectionHeader("Führerschein"),
+            new Paragraph({
+              children: [createText(personalInfo.drivingLicense)],
+              spacing: { after: 200 },
+            }),
+          ] : []),
+
           // --- REFERENCES ---
           ...(references.length > 0 ? [
             createSectionHeader("Referenzen"),

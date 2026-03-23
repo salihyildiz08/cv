@@ -191,6 +191,14 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
         </section>
       )}
 
+      {/* Driving License */}
+      {personalInfo.drivingLicense && (
+        <section className="mb-8">
+          <h3 className="text-lg font-bold uppercase border-b-2 border-gray-300 mb-3 pb-1">Führerschein</h3>
+          <p className="text-sm text-gray-700">{personalInfo.drivingLicense}</p>
+        </section>
+      )}
+
       {/* References */}
       {references.length > 0 && (
         <section className="mb-8">

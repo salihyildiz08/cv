@@ -5,7 +5,7 @@ import { enhanceText } from './services/geminiService';
 import { generateDocx } from './services/docxService';
 import { 
   Plus, Trash2, Download, Wand2, ChevronDown, ChevronUp, 
-  Briefcase, GraduationCap, Code, User, FileText, Settings, Users, Upload, Languages
+  Briefcase, GraduationCap, Code, User, FileText, Settings, Users, Upload, Languages, Car
 } from 'lucide-react';
 
 // Default State
@@ -21,6 +21,7 @@ const initialData: ResumeData = {
     linkedin: 'https://linkedin.com/in/salih-yildiz-bab4b1181/',
     github: 'https://github.com/salihyildiz08',
     photoUrl: 'https://picsum.photos/200', // Placeholder
+    drivingLicense: 'Klasse B',
     summary: ".NET-Entwickler mit über 5 Jahren Erfahrung im Aufbau skalierbarer und hochperformanter Backend-Systeme mit ASP.NET Core, ASP.NET MVC und Web API.\n\nErfahren im Entwurf wartbarer und skalierbarer Architekturen nach Clean Architecture und SOLID-Prinzipien. Fundierte Kenntnisse in der RESTful API-Entwicklung, Entity Framework Core, SQL Server Performance-Optimierung, Redis-Caching, strukturierter Protokollierung mit Serilog und JWT-basierter Authentifizierung.\n\nPraktische Erfahrung mit Zahlungssystem-Integrationen, Echtzeitanwendungen mit SignalR und Agile/Scrum-Entwicklungsumgebungen.",
   },
   experience: [
@@ -66,7 +67,8 @@ const initialData: ResumeData = {
     { category: 'Sonstiges', items: ['RESTful API Development', 'API Versioning', 'Middleware Development', 'Agile / Scrum'] }
   ],
   languages: [
-    { id: '1', name: 'Englisch', level: 'B2' }
+    { id: '1', name: 'Deutsch', level: 'Muttersprache' },
+    { id: '2', name: 'Englisch', level: 'B2' }
   ],
   references: [
     { 
@@ -266,6 +268,7 @@ function App() {
           {renderSidebarItem('projects', 'Projekte', <Code size={18} />)}
           {renderSidebarItem('skills', 'Kenntnisse', <Wand2 size={18} />)}
           {renderSidebarItem('languages', 'Sprachen', <Languages size={18} />)}
+          {renderSidebarItem('driving', 'Führerschein', <Car size={18} />)}
           {renderSidebarItem('references', 'Referenzen', <Users size={18} />)}
           {renderSidebarItem('settings', 'Einstellungen', <Settings size={18} />)}
         </nav>
@@ -274,17 +277,17 @@ function App() {
           <button 
             onClick={downloadPdf}
             className="w-full flex items-center justify-center gap-2 bg-gray-900 hover:bg-black text-white py-2.5 rounded-lg transition-all font-medium shadow-lg active:scale-95"
-            title="Use 'Save as PDF' from the print dialog"
+            title="Nutzen Sie 'Als PDF speichern' im Druckdialog"
           >
             <Download size={18} />
-            Download PDF (Drucken)
+            Download PDF
           </button>
           <button 
             onClick={() => generateDocx(data)}
             className="w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white py-2.5 rounded-lg transition-all font-medium shadow-lg active:scale-95"
           >
             <FileText size={18} />
-            Download Word (DOCX)
+            Word (DOCX) herunterladen
           </button>
         </div>
       </div>
@@ -510,6 +513,17 @@ function App() {
                 >
                   <Plus size={16} /> Sprache hinzufügen
                 </button>
+              </div>
+            )}
+
+            {activeTab === 'driving' && (
+              <div className="space-y-4">
+                <InputGroup 
+                  label="Führerschein" 
+                  value={data.personalInfo.drivingLicense || ''} 
+                  onChange={(v) => updatePersonalInfo('drivingLicense', v)} 
+                  placeholder="z.B. Klasse B, Klasse A" 
+                />
               </div>
             )}
 

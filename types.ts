@@ -55,6 +55,7 @@ export interface ResumeData {
     github: string;
     summary: string;
     photoUrl: string;
+    drivingLicense?: string;
   };
   experience: Experience[];
   education: Education[];
