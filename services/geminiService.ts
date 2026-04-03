@@ -10,7 +10,7 @@ export const enhanceText = async (text: string, context: string): Promise<string
       model: 'gemini-3-flash-preview', // Updated to recommended model for text tasks
       contents: `You are a professional CV editor. Rewrite the following text to be more professional, concise, and impactful for a CV. 
       Context: ${context} (e.g., job description, summary, project details).
-      Language: English.
+      Language: Turkish.
       
       Text to rewrite: "${text}"
       

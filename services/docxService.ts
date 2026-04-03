@@ -125,7 +125,7 @@ export const generateDocx = (data: ResumeData) => {
 
           // --- SUMMARY ---
           ...(personalInfo.summary ? [
-            createSectionHeader("Summary"),
+            createSectionHeader("Özet"),
             new Paragraph({
               alignment: AlignmentType.JUSTIFIED,
               spacing: { after: 200 },
@@ -135,7 +135,7 @@ export const generateDocx = (data: ResumeData) => {
 
           // --- SKILLS (Simple List - No Tables) ---
           ...(skills.length > 0 ? [
-            createSectionHeader("Technical Skills"),
+            createSectionHeader("Teknik Yetkinlikler"),
             ...skills.map(group => 
               new Paragraph({
                 spacing: { after: 100 },
@@ -150,7 +150,7 @@ export const generateDocx = (data: ResumeData) => {
 
           // --- EXPERIENCE ---
           ...(experience.length > 0 ? [
-            createSectionHeader("Work Experience"),
+            createSectionHeader("İş Deneyimi"),
             ...experience.flatMap(exp => [
               new Paragraph({
                 tabStops: [
@@ -181,7 +181,7 @@ export const generateDocx = (data: ResumeData) => {
 
           // --- PROJECTS ---
           ...(projects.length > 0 ? [
-            createSectionHeader("Projects"),
+            createSectionHeader("Projeler"),
             ...projects.flatMap(proj => [
               new Paragraph({
                 tabStops: [
@@ -203,7 +203,7 @@ export const generateDocx = (data: ResumeData) => {
               ...(proj.technologies.length > 0 ? [
                 new Paragraph({
                   spacing: { after: 50 },
-                  children: [createText(`Technologies: ${proj.technologies.join(", ")}`, { italics: true, size: 20, color: "666666" })],
+                  children: [createText(`Teknolojiler: ${proj.technologies.join(", ")}`, { italics: true, size: 20, color: "666666" })],
                 }),
               ] : []),
               new Paragraph({
@@ -215,7 +215,7 @@ export const generateDocx = (data: ResumeData) => {
 
           // --- EDUCATION ---
           ...(education.length > 0 ? [
-            createSectionHeader("Education"),
+            createSectionHeader("Eğitim"),
             ...education.flatMap(edu => [
               new Paragraph({
                 tabStops: [
@@ -242,7 +242,7 @@ export const generateDocx = (data: ResumeData) => {
 
           // --- LANGUAGES ---
           ...(languages && languages.length > 0 ? [
-            createSectionHeader("Languages"),
+            createSectionHeader("Diller"),
             ...languages.map(lang => 
               new Paragraph({
                 bullet: { level: 0 },
@@ -257,7 +257,7 @@ export const generateDocx = (data: ResumeData) => {
 
           // --- DRIVING LICENSE ---
           ...(personalInfo.drivingLicense ? [
-            createSectionHeader("Driving License"),
+            createSectionHeader("Ehliyet"),
             new Paragraph({
               children: [createText(personalInfo.drivingLicense)],
               spacing: { after: 200 },
@@ -266,7 +266,7 @@ export const generateDocx = (data: ResumeData) => {
 
           // --- REFERENCES ---
           ...(references.length > 0 ? [
-            createSectionHeader("References"),
+            createSectionHeader("Referanslar"),
             ...references.map(ref => 
               new Paragraph({
                 spacing: { after: 50 },
