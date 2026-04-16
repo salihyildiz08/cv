@@ -13,7 +13,7 @@ const initialData: ResumeData = {
   themeColor: '#2c3e50', // Professional dark blue/grey
   personalInfo: {
     fullName: 'SALİH YILDIZ',
-    title: 'Kıdemli .NET Backend Geliştirici',
+    title: 'Software Engineer (.NET Backend)',
     email: 'yldzsalih27@gmail.com',
     phone: '+90 543 282 33 01',
     location: 'Gaziantep, Türkiye',
@@ -22,48 +22,75 @@ const initialData: ResumeData = {
     github: 'https://github.com/salihyildiz08',
     photoUrl: 'https://picsum.photos/200', // Placeholder
     drivingLicense: 'B Sınıfı',
-    summary: "5+ yıllık deneyime sahip, yüksek performanslı ve ölçeklenebilir backend sistemleri geliştiren Kıdemli .NET Backend Geliştiricisiyim. ASP.NET Core, Web API ve modern yazılım mimarileri ile kurumsal düzeyde projeler geliştirme konusunda uzmanım.\n\nClean Architecture, SOLID prensipleri ve mikroservis mimarisi yaklaşımlarına hakimim. SQL Server performans optimizasyonu, Redis ile cache yönetimi ve yüksek trafikli sistemlerde performans iyileştirme konularında tecrübeliyim.\n\nBankacılık ve ödeme sistemleri entegrasyonları, SignalR ile gerçek zamanlı uygulamalar ve JWT tabanlı güvenlik mekanizmaları üzerinde aktif olarak çalıştım.\n\nKod kalitesi, sürdürülebilirlik ve sistem performansını sürekli geliştirmeye odaklıyım.",
+    summary: "Backend geliştirme alanında deneyimli bir Software Engineer olarak, yüksek trafikli ve ölçeklenebilir sistemlerin geliştirilmesinde aktif rol almaktayım.\n\nASP.NET Core ve modern yazılım mimarileri (Clean Architecture, SOLID) ile kurumsal projeler geliştirdim.\n\nBankacılık entegrasyonları, gerçek zamanlı sistemler ve performans optimizasyonu konularında deneyim sahibiyim.\n\nFrontend tarafında Angular ve React ile uygulama geliştirme deneyimine sahibim.\n\nJava ekosistemine hızlı adapte olma ve Spring Boot gibi teknolojilerde kendimi geliştirme konusunda istekliyim.\n\nAgile/Scrum süreçlerinde aktif rol alarak sürdürülebilir ve güvenli yazılım geliştirme pratiklerini benimsiyorum.",
   },
   experience: [
     {
       id: '1',
       company: 'Dilek Halı A.Ş.',
-      position: 'Kıdemli .NET Geliştirici',
+      position: 'Software Engineer (.NET Backend)',
       startDate: '2022',
       endDate: 'Günümüz',
-      description: 'ASP.NET Core ve Clean Architecture kullanarak kurumsal ölçekli B2B sipariş yönetim sistemleri geliştirdim.\nYüksek performanslı RESTful API’ler tasarlayıp geliştirdim.\nSQL Server performansını indeksleme ve query optimizasyonu ile %30 artırdım.\nRedis kullanarak dağıtık cache altyapısı kurdum ve sistem yanıt sürelerini düşürdüm.\nSerilog ile loglama altyapısı geliştirerek sistem izlenebilirliğini artırdım.\nGlobal exception handling middleware geliştirerek sistem stabilitesini sağladım.\nJWT ve rol bazlı yetkilendirme ile güvenli kimlik doğrulama sistemleri geliştirdim.\nSignalR ile gerçek zamanlı bildirim sistemleri geliştirdim.\nAPI versioning stratejisi oluşturarak geriye dönük uyumluluğu sağladım.\nBanka API’leri ve ödeme sistemleri ile entegrasyonlar gerçekleştirdim.\nAgile/Scrum süreçlerinde aktif rol aldım.'
+      description: 'Yüksek trafikli sistemler için RESTful API’ler geliştirdim\nClean Architecture ile sürdürülebilir backend sistemleri kurdum\nSQL performans optimizasyonu ile sistem hızını %30 artırdım\nRedis ile cache altyapısı kurarak response sürelerini düşürdüm\nJWT ile güvenli authentication sistemleri geliştirdim\nSignalR ile gerçek zamanlı sistemler geliştirdim\nBanka ve ödeme sistemleri entegrasyonları gerçekleştirdim\nFrontend ekipleri ile Angular/React projelerinde entegre çalıştım\nAgile/Scrum süreçlerinde aktif rol aldım'
     },
     {
       id: '2',
       company: 'Eksen Mobilya A.Ş.',
-      position: '.NET Geliştirici',
+      position: 'Software Developer',
       startDate: '2020',
       endDate: '2022',
-      description: 'ASP.NET Core ve Web API kullanarak iç sistemler geliştirdim.\nAngular ile dinamik frontend uygulamaları geliştirdim.\nVeritabanı tasarımı yaparak SQL performans iyileştirmeleri gerçekleştirdim.\nYazılım mimarisi ve kod kalitesi süreçlerine katkı sağladım.'
+      description: 'ASP.NET Core ile backend servisleri geliştirdim\nAngular ile dinamik frontend uygulamalar geliştirdim\nVeritabanı tasarımı ve performans iyileştirmeleri yaptım'
     }
   ],
   education: [
     {
       id: '1',
       school: 'İskenderun Teknik Üniversitesi',
-      degree: 'Bilgisayar Mühendisliği (Lisans)',
+      degree: 'Bilgisayar Mühendisliği',
       startDate: '2016',
       endDate: '2020',
       description: ''
     }
   ],
-  projects: [], 
+  projects: [
+    {
+      id: '1',
+      name: '🏦 Banka Ekstreleri & Hesap Yönetim Sistemi',
+      link: '',
+      description: 'Çoklu banka hesaplarını tek platformda yöneten finansal sistem geliştirdim\nBanka entegrasyonları ile veri akışını otomatik hale getirdim\nYetkilendirme mekanizmaları ile güvenli veri erişimi sağladım\nYüksek hacimli verilerin performanslı işlenmesini optimize ettim',
+      technologies: ['.NET Core', 'Web API', 'SQL Server']
+    },
+    {
+      id: '2',
+      name: '🧾 B2B Stok ve Üretim Sipariş Yönetim Sistemi',
+      link: '',
+      description: 'Yüksek trafikli B2B sipariş ve üretim yönetim sistemi geliştirdim\nStok, üretim ve ödeme süreçlerini uçtan uca yöneten backend mimarisi kurdum\nDomain’e özel algoritmalar ile sipariş doğruluğunu artırdım\nÖlçeklenebilir ve sürdürülebilir sistem tasarımı gerçekleştirdim',
+      technologies: ['.NET Core', 'Clean Architecture', 'Redis']
+    },
+    {
+      id: '3',
+      name: '⚡ QR Kod ile Gerçek Zamanlı Sipariş Sistemi',
+      link: '',
+      description: 'SignalR ile real-time sipariş ve bildirim sistemi geliştirdim\nAnlık veri güncellemeleri ile kullanıcı deneyimini iyileştirdim\nYüksek kullanıcı etkileşimine uygun performans optimizasyonları yaptım\nFrontend tarafında modern UI yaklaşımları ile kullanıcı deneyimi geliştirdim',
+      technologies: ['SignalR', 'Angular', 'React']
+    },
+    {
+      id: '4',
+      name: '📊 Müşteri Takip ve Yönetim Sistemi',
+      link: '',
+      description: 'CRM benzeri müşteri yönetim sistemi geliştirdim\nMüşteri segmentasyonu ve analiz altyapısı oluşturdum\nBackend ve frontend katmanlarını entegre şekilde geliştirdim',
+      technologies: ['.NET Core', 'Angular']
+    }
+  ], 
   skills: [
-    { category: 'Programlama Dilleri', items: ['C#', 'JavaScript'] },
-    { category: 'Backend Geliştirme', items: ['ASP.NET Core', 'ASP.NET MVC', '.NET Core', 'Web API (RESTful servisler)', 'Entity Framework Core', 'LINQ', 'WCF'] },
-    { category: 'Mimari & Tasarım', items: ['Clean Architecture', 'Mikroservis Mimarisi (Microservices)', 'N-Tier Architecture', 'SOLID Prensipleri', 'Design Patterns', 'Dependency Injection'] },
-    { category: 'Veritabanları', items: ['SQL Server', 'PostgreSQL', 'MongoDB', 'MySQL'] },
-    { category: 'Performans & Cache', items: ['Redis (Distributed Cache)', 'In-Memory Cache', 'SQL Index Optimizasyonu', 'Query Performance Tuning'] },
-    { category: 'Logging & Monitoring', items: ['Serilog (Structured Logging)', 'Global Exception Handling', 'Middleware geliştirme'] },
-    { category: 'Test', items: ['Unit Test (xUnit, NUnit)', 'Moq'] },
+    { category: 'Backend', items: ['ASP.NET Core', 'Web API', '.NET Core', 'Entity Framework Core', 'LINQ', 'RESTful API geliştirme'] },
+    { category: 'Frontend', items: ['JavaScript', 'TypeScript', 'Angular', 'React'] },
+    { category: 'Mimari & Tasarım', items: ['Clean Architecture', 'Microservices', 'SOLID', 'Design Patterns'] },
+    { category: 'Veritabanı', items: ['SQL Server', 'PostgreSQL'] },
+    { category: 'Performans', items: ['Redis (Distributed Cache)', 'Query Optimization', 'Indexing'] },
     { category: 'Güvenlik', items: ['JWT Authentication', 'Role-Based Authorization'] },
-    { category: 'DevOps & Araçlar', items: ['Docker (Containerization)', 'Git', 'GitHub', 'IIS', 'Postman', 'CI/CD (Temel seviye – GitHub Actions / Jenkins)'] },
-    { category: 'Diğer', items: ['API Versioning', 'REST API Design Principles', 'Agile / Scrum', 'SignalR (Gerçek zamanlı sistemler)'] }
+    { category: 'DevOps & Araçlar', items: ['Docker', 'Git', 'CI/CD'] },
+    { category: 'Diğer', items: ['SignalR', 'API Versioning', 'Agile / Scrum'] }
   ],
   languages: [
     { id: '1', name: 'İngilizce', level: 'B2 (Profesyonel Çalışma Seviyesi)' }

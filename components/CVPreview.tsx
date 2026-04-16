@@ -80,7 +80,7 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
       {/* Summary */}
       {personalInfo.summary && (
         <section className="mb-8 break-inside-avoid">
-          <h3 className="text-lg font-bold uppercase border-b-2 border-gray-300 mb-3 pb-1">Özet</h3>
+          <h3 className="text-lg font-bold border-b-2 border-gray-300 mb-3 pb-1">{"Özet".toLocaleUpperCase('tr-TR')}</h3>
           <p className="text-sm text-left whitespace-pre-line leading-relaxed">
             {personalInfo.summary}
           </p>
@@ -90,7 +90,7 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
       {/* Skills */}
       {skills.length > 0 && (
         <section className="mb-8 break-inside-avoid">
-          <h3 className="text-lg font-bold uppercase border-b-2 border-gray-300 mb-3 pb-1">Teknik Yetkinlikler</h3>
+          <h3 className="text-lg font-bold border-b-2 border-gray-300 mb-3 pb-1">{"Teknik Yetkinlikler".toLocaleUpperCase('tr-TR')}</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 gap-x-8 gap-y-4 text-sm">
             {skills.map((group, idx) => (
               <div key={idx} className="break-inside-avoid">
@@ -107,7 +107,7 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
       {/* Experience */}
       {experience.length > 0 && (
         <section className="mb-8">
-          <h3 className="text-lg font-bold uppercase border-b-2 border-gray-300 mb-3 pb-1">İş Deneyimi</h3>
+          <h3 className="text-lg font-bold border-b-2 border-gray-300 mb-3 pb-1">{"İş Deneyimi".toLocaleUpperCase('tr-TR')}</h3>
           <div className="space-y-6">
             {experience.map((exp) => (
               <div key={exp.id} className="break-inside-avoid">
@@ -130,7 +130,7 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
       {/* Projects */}
       {projects.length > 0 && (
         <section className="mb-8">
-          <h3 className="text-lg font-bold uppercase border-b-2 border-gray-300 mb-3 pb-1">Projeler</h3>
+          <h3 className="text-lg font-bold border-b-2 border-gray-300 mb-3 pb-1">{"Projeler".toLocaleUpperCase('tr-TR')}</h3>
           <div className="space-y-6">
             {projects.map((proj) => (
               <div key={proj.id} className="break-inside-avoid">
@@ -159,7 +159,7 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
       {/* Education */}
       {education.length > 0 && (
         <section className="mb-8">
-          <h3 className="text-lg font-bold uppercase border-b-2 border-gray-300 mb-3 pb-1">Eğitim</h3>
+          <h3 className="text-lg font-bold border-b-2 border-gray-300 mb-3 pb-1">{"Eğitim".toLocaleUpperCase('tr-TR')}</h3>
           <div className="space-y-4">
             {education.map((edu) => (
               <div key={edu.id} className="break-inside-avoid">
@@ -180,7 +180,7 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
       {/* Languages */}
       {languages && languages.length > 0 && (
         <section className="mb-8">
-          <h3 className="text-lg font-bold uppercase border-b-2 border-gray-300 mb-3 pb-1">Diller</h3>
+          <h3 className="text-lg font-bold border-b-2 border-gray-300 mb-3 pb-1">{"Diller".toLocaleUpperCase('tr-TR')}</h3>
           <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
             {languages.map((lang) => (
               <li key={lang.id} className="break-inside-avoid">
@@ -194,7 +194,7 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
       {/* Driving License */}
       {personalInfo.drivingLicense && (
         <section className="mb-8">
-          <h3 className="text-lg font-bold uppercase border-b-2 border-gray-300 mb-3 pb-1">Ehliyet</h3>
+          <h3 className="text-lg font-bold border-b-2 border-gray-300 mb-3 pb-1">{"Ehliyet".toLocaleUpperCase('tr-TR')}</h3>
           <p className="text-sm text-gray-700">{personalInfo.drivingLicense}</p>
         </section>
       )}
@@ -202,7 +202,7 @@ export const CVPreview: React.FC<CVPreviewProps> = ({ data, id }) => {
       {/* References */}
       {references.length > 0 && (
         <section className="mb-8">
-          <h3 className="text-lg font-bold uppercase border-b-2 border-gray-300 mb-3 pb-1">Referanslar</h3>
+          <h3 className="text-lg font-bold border-b-2 border-gray-300 mb-3 pb-1">{"Referanslar".toLocaleUpperCase('tr-TR')}</h3>
           <div className="text-sm text-gray-700 space-y-2">
             {references.map((ref) => (
               <div key={ref.id} className="break-inside-avoid">

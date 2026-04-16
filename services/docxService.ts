@@ -11,7 +11,7 @@ export const generateDocx = (data: ResumeData) => {
   // Helper for section headers with bottom border
   const createSectionHeader = (text: string) => {
     return new Paragraph({
-      text: text.toLocaleUpperCase('en-US'),
+      text: text.toLocaleUpperCase('tr-TR'),
       heading: HeadingLevel.HEADING_2,
       border: {
         bottom: {
@@ -75,7 +75,7 @@ export const generateDocx = (data: ResumeData) => {
             spacing: { after: 100 },
             children: [
               new TextRun({
-                text: personalInfo.fullName.toLocaleUpperCase('en-US'),
+                text: personalInfo.fullName.toLocaleUpperCase('tr-TR'),
                 font: FONT_FAMILY,
                 size: 48, // 24pt
                 bold: true,
@@ -126,11 +126,13 @@ export const generateDocx = (data: ResumeData) => {
           // --- SUMMARY ---
           ...(personalInfo.summary ? [
             createSectionHeader("Özet"),
-            new Paragraph({
-              alignment: AlignmentType.JUSTIFIED,
-              spacing: { after: 200 },
-              children: [createText(personalInfo.summary)],
-            }),
+            ...personalInfo.summary.split('\n').map(line => 
+              new Paragraph({
+                alignment: AlignmentType.JUSTIFIED,
+                spacing: { after: 100 },
+                children: [createText(line)],
+              })
+            ),
           ] : []),
 
           // --- SKILLS (Simple List - No Tables) ---
@@ -172,10 +174,12 @@ export const generateDocx = (data: ResumeData) => {
                 spacing: { after: 100 },
                 children: [createText(exp.company, { bold: true, color: "444444" })],
               }),
-              new Paragraph({
-                spacing: { after: 200 },
-                children: [createText(exp.description)],
-              }),
+              ...exp.description.split('\n').map(line => 
+                new Paragraph({
+                  spacing: { after: 100 },
+                  children: [createText(line)],
+                })
+              ),
             ]),
           ] : []),
 
@@ -200,16 +204,18 @@ export const generateDocx = (data: ResumeData) => {
                   ] : []),
                 ],
               }),
+              ...proj.description.split('\n').map(line => 
+                new Paragraph({
+                  spacing: { after: 100 },
+                  children: [createText(line)],
+                })
+              ),
               ...(proj.technologies.length > 0 ? [
                 new Paragraph({
-                  spacing: { after: 50 },
+                  spacing: { after: 200 },
                   children: [createText(`Teknolojiler: ${proj.technologies.join(", ")}`, { italics: true, size: 20, color: "666666" })],
                 }),
               ] : []),
-              new Paragraph({
-                spacing: { after: 200 },
-                children: [createText(proj.description)],
-              }),
             ]),
           ] : []),
 
