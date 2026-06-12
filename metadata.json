@@ -1,5 +1,8 @@
 {
-  "name": "Salih Yıldız CV Oluşturucu",
-  "description": "Profesyonel ve ATS uyumlu CV oluşturma aracı",
-  "requestFramePermissions": []
+  "name": "Salih Yildiz Lebenslauf-Generator",
+  "description": "Professionelles und ATS-freundliches Tool zur Erstellung von Lebenslaeufen",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
